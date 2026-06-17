@@ -1,7 +1,7 @@
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
-from typing import Iterator
+from typing import Any, Iterator
 
 from app.core.config import get_settings
 
@@ -72,8 +72,42 @@ CREATE TABLE IF NOT EXISTS alert_logs (
 """
 
 
+class PostgresConnection:
+    def __init__(self, conn: Any) -> None:
+        self.conn = conn
+
+    def execute(self, query: str, params: tuple = ()) -> Any:
+        query = query.replace("?", "%s")
+        return self.conn.execute(query, params)
+
+    def executescript(self, script: str) -> None:
+        for statement in script.split(";"):
+            statement = statement.strip()
+            if statement:
+                self.conn.execute(statement)
+
+    def commit(self) -> None:
+        self.conn.commit()
+
+    def close(self) -> None:
+        self.conn.close()
+
+
 def init_db() -> None:
-    db_path = Path(get_settings().database_path)
+    settings = get_settings()
+    if settings.database_url:
+        from psycopg import connect
+        from psycopg.rows import dict_row
+
+        conn = PostgresConnection(connect(settings.database_url, row_factory=dict_row))
+        try:
+            conn.executescript(SCHEMA)
+            conn.commit()
+        finally:
+            conn.close()
+        return
+
+    db_path = Path(settings.database_path)
     db_path.parent.mkdir(parents=True, exist_ok=True)
     with sqlite3.connect(db_path) as conn:
         conn.executescript(SCHEMA)
@@ -81,8 +115,21 @@ def init_db() -> None:
 
 
 @contextmanager
-def get_connection() -> Iterator[sqlite3.Connection]:
-    conn = sqlite3.connect(get_settings().database_path)
+def get_connection() -> Iterator[Any]:
+    settings = get_settings()
+    if settings.database_url:
+        from psycopg import connect
+        from psycopg.rows import dict_row
+
+        conn = PostgresConnection(connect(settings.database_url, row_factory=dict_row))
+        try:
+            yield conn
+            conn.commit()
+        finally:
+            conn.close()
+        return
+
+    conn = sqlite3.connect(settings.database_path)
     conn.row_factory = sqlite3.Row
     try:
         yield conn

@@ -11,3 +11,4 @@ frontend/dist/
 runs/
 *.pt
 !backend/models/.gitkeep
+!backend/models/best.pt

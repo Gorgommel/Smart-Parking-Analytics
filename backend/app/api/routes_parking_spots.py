@@ -27,9 +27,10 @@ class ParkingSpotsPayload(BaseModel):
 def create_spots(payload: ParkingSpotsPayload) -> dict:
     now = datetime.now().isoformat(timespec="seconds")
     with get_connection() as conn:
+        conn.execute("DELETE FROM parking_lots WHERE id = ?", (payload.parking_lot_id,))
         conn.execute(
             """
-            INSERT OR REPLACE INTO parking_lots VALUES (?, ?, ?, ?, ?)
+            INSERT INTO parking_lots VALUES (?, ?, ?, ?, ?)
             """,
             (
                 payload.parking_lot_id,

@@ -1,6 +1,6 @@
 # Smart Parking Analytics
 
-Sistema inteligente de estacionamento com visao computacional, YOLO, FastAPI e React.
+Sistema inteligente de estacionamento com visao computacional, YOLO26, FastAPI e React.
 
 ## O que ja esta implementado
 
@@ -10,11 +10,12 @@ Sistema inteligente de estacionamento com visao computacional, YOLO, FastAPI e R
 - Servico de inferencia YOLO com suporte a `backend/models/best.pt`.
 - Modo demo automatico quando o modelo real ainda nao esta disponivel.
 - Calculo de ocupacao por vagas cadastradas com poligonos.
-- Historico temporal em SQLite.
+- Historico temporal em SQLite local ou PostgreSQL em producao.
 - Estatisticas de ocupacao e horarios de pico.
 - Alertas quando a ocupacao ultrapassa 90%.
 - Relatorios CSV e PDF.
 - Dashboard React + Vite com upload, cards, graficos e imagem anotada.
+- Modelo YOLO26n treinado com dataset personalizado.
 
 ## Estrutura
 
@@ -74,7 +75,66 @@ Depois de treinar o YOLO, coloque o arquivo aqui:
 backend/models/best.pt
 ```
 
-Ao reiniciar a API, o servico tentara carregar `best.pt`. Se ele nao existir, tentara carregar `yolo11n.pt`. Se nao conseguir carregar YOLO, entra em modo demo para permitir a demonstracao do fluxo completo.
+Ao reiniciar a API, o servico tentara carregar `best.pt`. Se ele nao existir, tentara carregar `yolo26n.pt`. Se nao conseguir carregar YOLO, entra em modo demo para permitir a demonstracao do fluxo completo.
+
+## Treinamento realizado
+
+Modelo base:
+
+```text
+yolo26n.pt
+```
+
+Dataset:
+
+```text
+Fonte: Roboflow
+Formato: YOLO26 Object Detection
+Total: 106 imagens
+Train: 78 imagens
+Validation: 13 imagens
+Test: 15 imagens
+Classes: car, motorcycle, pickup, van
+```
+
+Treinamento:
+
+```text
+Epochs: 100
+Image size: 640
+Batch: 4
+Device: CPU
+```
+
+Metricas no validation:
+
+```text
+Precision: 0.826
+Recall: 0.277
+mAP50: 0.344
+mAP50-95: 0.179
+```
+
+Metricas no test:
+
+```text
+Precision: 0.777
+Recall: 0.161
+mAP50: 0.146
+mAP50-95: 0.0963
+```
+
+Artefatos:
+
+```text
+docs/training-results/results.csv
+docs/training-results/results.png
+docs/training-results/confusion_matrix.png
+docs/training-results/confusion_matrix_normalized.png
+backend/models/best.pt
+```
+
+Observacao: o dataset ainda esta desbalanceado. A classe `van` tem poucos exemplos e isso limita as metricas finais.
 
 ## Cadastrar vagas
 
@@ -107,7 +167,7 @@ flowchart TD
     U["Usuario"] --> FE["React + Vite"]
     FE --> API["FastAPI"]
     API --> YOLO["YOLO Service"]
-    API --> DB["SQLite local / PostgreSQL futuro"]
+    API --> DB["SQLite local / PostgreSQL em producao"]
     YOLO --> API
     API --> AN["Analytics Service"]
     AN --> DB
@@ -122,3 +182,36 @@ flowchart TD
 - PostgreSQL via Docker.
 - Heatmap por setor.
 - Previsao de lotacao.
+
+## Deploy
+
+Recomendacao:
+
+```text
+Frontend: Vercel
+Backend: Render Web Service
+Banco: Render PostgreSQL
+```
+
+Guia completo em:
+
+```text
+docs/deployment.md
+```
+
+## Checklist de entrega
+
+- [x] API propria com FastAPI.
+- [x] Frontend proprio com React + Vite.
+- [x] Modelo YOLO26n treinado.
+- [x] Dataset personalizado exportado do Roboflow.
+- [x] `best.pt` copiado para `backend/models/best.pt`.
+- [x] Metricas de treino registradas.
+- [x] Diagrama Mermaid no README.
+- [x] Relatorios CSV e PDF.
+- [x] Analytics de ocupacao e historico.
+- [x] Suporte local a SQLite.
+- [x] Suporte de deploy a PostgreSQL via `DATABASE_URL`.
+- [ ] Melhorar balanceamento do dataset.
+- [ ] Publicar link do `best.pt` se nao versionar o peso no GitHub.
+- [ ] Ensaiar demonstracao ao vivo.
