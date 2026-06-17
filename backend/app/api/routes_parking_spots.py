@@ -23,6 +23,39 @@ class ParkingSpotsPayload(BaseModel):
     spots: list[SpotPayload]
 
 
+class ParkingCapacityPayload(BaseModel):
+    parking_lot_id: str = "default"
+    parking_lot_name: str = "Demo Parking"
+    location: str = "Campus"
+    total_spots: int = Field(gt=0)
+
+
+@router.post("/capacity")
+def create_capacity(payload: ParkingCapacityPayload) -> dict:
+    now = datetime.now().isoformat(timespec="seconds")
+    with get_connection() as conn:
+        conn.execute("DELETE FROM parking_lots WHERE id = ?", (payload.parking_lot_id,))
+        conn.execute(
+            """
+            INSERT INTO parking_lots VALUES (?, ?, ?, ?, ?)
+            """,
+            (
+                payload.parking_lot_id,
+                payload.parking_lot_name,
+                payload.location,
+                payload.total_spots,
+                now,
+            ),
+        )
+        conn.execute("DELETE FROM parking_spots WHERE parking_lot_id = ?", (payload.parking_lot_id,))
+    return {
+        "message": "Parking capacity registered successfully.",
+        "parking_lot_id": payload.parking_lot_id,
+        "total_spots": payload.total_spots,
+        "mode": "capacity_only",
+    }
+
+
 @router.post("")
 def create_spots(payload: ParkingSpotsPayload) -> dict:
     now = datetime.now().isoformat(timespec="seconds")

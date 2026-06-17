@@ -1,4 +1,4 @@
-from datetime import datetime
+﻿from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
@@ -48,7 +48,7 @@ async def upload_video(
         fps = cap.get(cv2.CAP_PROP_FPS) or 24
         total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
         step = max(int(fps * max(frame_interval_seconds, 1)), 1)
-        max_frames_to_process = 12
+        max_frames_to_process = 5
         frame_index = 0
         processed = 0
         last_result = None
@@ -82,7 +82,7 @@ async def upload_video(
         JOBS[job_id]["status"] = "completed"
         JOBS[job_id]["progress"] = 100
         JOBS[job_id]["summary"] = best_result or last_result
-        JOBS[job_id]["message"] = f"Processed {processed} sampled frames."
+        JOBS[job_id]["message"] = f"Video processado: {processed} frames amostrados."
         return JOBS[job_id]
     except Exception as exc:
         JOBS[job_id]["status"] = "failed"
@@ -93,3 +93,4 @@ async def upload_video(
 @router.get("/jobs/{job_id}")
 def get_job(job_id: str) -> dict:
     return JOBS.get(job_id, {"job_id": job_id, "status": "not_found", "progress": 0})
+

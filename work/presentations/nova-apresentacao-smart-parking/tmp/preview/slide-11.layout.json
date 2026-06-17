@@ -1,0 +1,657 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/415plu",
+    "id": "415plu",
+    "slide": 11,
+    "layoutId": "7a66234c-353f-47da-9653-e3cc0a9d2ab7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "7a66234c-353f-47da-9653-e3cc0a9d2ab7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#0F766E",
+      "lineColor": "#0F766E",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "2",
+      "bbox": [
+        64,
+        34,
+        420,
+        24
+      ],
+      "geometry": "rect",
+      "text": "SMART PARKING ANALYTICS",
+      "textPreview": "SMART PARKING ANALYTICS",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "Aptos",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SMART PARKING ANALYTICS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SMART PARKING ANALYTICS",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos",
+            "color": "#0F766E",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SMART PARKING ANALYTICS",
+              "fontSize": 12,
+              "typeface": "Aptos",
+              "color": "#0F766E",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "3",
+      "bbox": [
+        64,
+        62,
+        940,
+        58
+      ],
+      "geometry": "rect",
+      "text": "API e interface propria",
+      "textPreview": "API e interface propria",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "Aptos Display",
+        "color": "#0F172A",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "API e interface propria"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "API e interface propria",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Aptos Display",
+            "color": "#0F172A",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "API e interface propria",
+              "fontSize": 34,
+              "typeface": "Aptos Display",
+              "color": "#0F172A",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "4",
+      "bbox": [
+        64,
+        682,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+      "textPreview": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Aptos",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos",
+            "color": "#64748B"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+              "fontSize": 11,
+              "typeface": "Aptos",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "5",
+      "bbox": [
+        90,
+        145,
+        540,
+        340
+      ],
+      "geometry": "rect",
+      "text": "- POST /api/predict: inferencia em imagem.\n- POST /api/video/upload: processamento de video por frames.\n- POST /api/parking-spots/capacity: capacidade total.\n- POST /api/parking-spots: poligonos calibrados.\n- GET /api/statistics, /history, /reports: analytics e relatorios.",
+      "textPreview": "- POST /api/predict: inferencia em imagem. | - POST /api/video/upload: processamento de video por frames. | - POST /api/parking-spots/cap...",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Aptos",
+        "color": "#0F172A",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- POST /api/predict: inferencia em imagem."
+          },
+          {
+            "index": 2,
+            "text": "- POST /api/video/upload: processamento de video por"
+          },
+          {
+            "index": 3,
+            "text": "frames."
+          },
+          {
+            "index": 4,
+            "text": "- POST /api/parking-spots/capacity: capacidade total."
+          },
+          {
+            "index": 5,
+            "text": "- POST /api/parking-spots: poligonos calibrados."
+          },
+          {
+            "index": 6,
+            "text": "- GET /api/statistics, /history, /reports: analytics e relatorios."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- POST /api/predict: inferencia em imagem.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- POST /api/predict: inferencia em imagem.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- POST /api/video/upload: processamento de video por frames.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- POST /api/video/upload: processamento de video por frames.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- POST /api/parking-spots/capacity: capacidade total.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- POST /api/parking-spots/capacity: capacidade total.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- POST /api/parking-spots: poligonos calibrados.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- POST /api/parking-spots: poligonos calibrados.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "- GET /api/statistics, /history, /reports: analytics e relatorios.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- GET /api/statistics, /history, /reports: analytics e relatorios.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "6",
+      "bbox": [
+        710,
+        150,
+        420,
+        340
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F8FAFC",
+      "lineColor": "#CBD5E1",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "7",
+      "bbox": [
+        744,
+        184,
+        330,
+        30
+      ],
+      "geometry": "rect",
+      "text": "Dashboard React",
+      "textPreview": "Dashboard React",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "Aptos",
+        "color": "#2563EB",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Dashboard React"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Dashboard React",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Aptos",
+            "color": "#2563EB",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Dashboard React",
+              "fontSize": 26,
+              "typeface": "Aptos",
+              "color": "#2563EB",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "8",
+      "bbox": [
+        744,
+        246,
+        330,
+        180
+      ],
+      "geometry": "rect",
+      "text": "- Upload de imagem e video.\n- Cards de ocupacao.\n- Graficos temporais.\n- Imagem anotada.\n- PDF e CSV.",
+      "textPreview": "- Upload de imagem e video. | - Cards de ocupacao. | - Graficos temporais. | - Imagem anotada. | - PDF e CSV.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "Aptos",
+        "color": "#0F172A",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- Upload de imagem e video."
+          },
+          {
+            "index": 2,
+            "text": "- Cards de ocupacao."
+          },
+          {
+            "index": 3,
+            "text": "- Graficos temporais."
+          },
+          {
+            "index": 4,
+            "text": "- Imagem anotada."
+          },
+          {
+            "index": 5,
+            "text": "- PDF e CSV."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- Upload de imagem e video.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Upload de imagem e video.",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- Cards de ocupacao.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Cards de ocupacao.",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- Graficos temporais.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Graficos temporais.",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- Imagem anotada.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Imagem anotada.",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "- PDF e CSV.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- PDF e CSV.",
+              "fontSize": 22,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,7 @@
+Plano do deck
+
+Modo: create.
+Formato: 16:9, 1280x720.
+Paleta: fundo #f8fafc, texto #0f172a, primario #0f766e, secundario #2563eb, acento #f97316.
+Fontes: Aptos Display e Aptos.
+Slides: capa, problema, proposta, pipeline, dataset, treinamento, metricas, arquitetura, logica, demo, API/frontend, checklist e roteiro.

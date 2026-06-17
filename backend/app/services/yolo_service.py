@@ -1,9 +1,10 @@
-from pathlib import Path
+﻿from pathlib import Path
 from typing import Any
 
 from PIL import Image, ImageDraw, ImageFont
 
 from app.core.config import get_settings
+from app.services.occupancy_service import scale_polygon
 
 
 VEHICLE_CLASSES = {"car", "motorcycle", "pickup", "van", "truck", "bus"}
@@ -78,8 +79,9 @@ class YoloService:
         occupied_spot_codes = occupied_spot_codes or set()
 
         if spots:
+            width, height = image.size
             for spot in spots:
-                polygon = [tuple(point) for point in spot.polygon]
+                polygon = [tuple(point) for point in scale_polygon(spot.polygon, (width, height))]
                 is_occupied = spot.code in occupied_spot_codes
                 color = "#ef4444" if is_occupied else "#22c55e"
                 draw.polygon(polygon, outline=color)
@@ -101,7 +103,8 @@ class YoloService:
             if item.get("spot_id"):
                 label += f' | {item["spot_id"]}'
             draw.rectangle((x1, y1, x2, y2), outline=color, width=4)
-            draw.rectangle((x1, max(y1 - 22, 0), x1 + 190, y1), fill=color)
+            label_width = min(max(len(label) * 8 + 12, 86), max(image.width - x1, 86))
+            draw.rectangle((x1, max(y1 - 22, 0), x1 + label_width, y1), fill=color)
             draw.text((x1 + 4, max(y1 - 20, 0)), label, fill="white", font=font)
 
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -140,3 +143,4 @@ class YoloService:
 
 
 yolo_service = YoloService()
+

@@ -1,0 +1,219 @@
+{"kind":"deck","id":"pr/cc4utl","name":"Deck"}
+{"kind":"layout","layoutId":"7fd7792f-d24b-41b2-963c-ffe8ca8ff56c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"7a66234c-353f-47da-9653-e3cc0a9d2ab7","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xarefl","slide":1,"title":"Smart Parking Analytics","textShapes":9}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":1,"text":"Smart Parking Analytics","textPreview":"Smart Parking Analytics","textChars":23,"textLines":1,"bbox":[72,96,760,84]}
+{"kind":"textbox","id":"sh/d0z61032","slide":1,"text":"Sistema inteligente de estacionamento com YOLO, FastAPI, React e analytics em tempo real","textPreview":"Sistema inteligente de estacionamento com YOLO, FastAPI, React e analytics em tempo real","textChars":88,"textLines":1,"bbox":[72,194,760,78]}
+{"kind":"shape","id":"sh/kf6dcbul","slide":1,"bbox":[72,380,250,116]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":1,"text":"Modelo treinado","textPreview":"Modelo treinado","textChars":15,"textLines":1,"bbox":[90,396,214,24]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":1,"text":"YOLO26n","textPreview":"YOLO26n","textChars":7,"textLines":1,"bbox":[90,424,214,54]}
+{"kind":"shape","id":"sh/d8bat47y","slide":1,"bbox":[350,380,250,116]}
+{"kind":"textbox","id":"sh/knih4byh","slide":1,"text":"Classe final","textPreview":"Classe final","textChars":12,"textLines":1,"bbox":[368,396,214,24]}
+{"kind":"textbox","id":"sh/val87ed8","slide":1,"text":"car","textPreview":"car","textChars":3,"textLines":1,"bbox":[368,424,214,54]}
+{"kind":"shape","id":"sh/6psfil0r","slide":1,"bbox":[628,380,250,116]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":1,"text":"mAP50 test","textPreview":"mAP50 test","textChars":10,"textLines":1,"bbox":[646,396,214,24]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":1,"text":"0.921","textPreview":"0.921","textChars":5,"textLines":1,"bbox":[646,424,214,54]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":1,"text":"Aplicacao academica completa: dataset personalizado, treinamento, API propria, dashboard e demonstracao funcional.","textPreview":"Aplicacao academica completa: dataset personalizado, treinamento, API propria, dashboard e demonstracao funcional.","textChars":114,"textLines":1,"bbox":[72,560,930,48]}
+{"kind":"notes","id":"nt/xarefl","slide":1,"text":""}
+{"kind":"slide","id":"sl/z7cdje","slide":2,"title":"SMART PARKING ANALYTICS","textShapes":6}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":2,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/ulwval87","slide":2,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":2,"text":"Problema real","textPreview":"Problema real","textChars":13,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":2,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":2,"text":"- Estacionamentos de shoppings, universidades e empresas precisam saber ocupacao em tempo real.\n- Contagem manual e sensores por vaga aumentam custo e manutencao.\n- Cameras ja existentes podem virar fonte de dados com visao computacional.\n- A proposta nao e apenas contar objetos: o sistema gera metricas, historico, alertas e relatorios.","textPreview":"- Estacionamentos de shoppings, universidades e empresas precisam saber ocupacao em tempo real. | - Contagem manual e sensores por vaga a...","textChars":338,"textLines":4,"bbox":[84,150,620,330]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":2,"bbox":[760,148,420,330]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":2,"text":"Pergunta central","textPreview":"Pergunta central","textChars":16,"textLines":1,"bbox":[790,178,360,30]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":2,"text":"Como transformar imagens ou videos de estacionamento em indicadores operacionais para tomada de decisao?","textPreview":"Como transformar imagens ou videos de estacionamento em indicadores operacionais para tomada de decisao?","textChars":104,"textLines":1,"bbox":[790,228,350,160]}
+{"kind":"notes","id":"nt/z7cdje","slide":2,"text":""}
+{"kind":"slide","id":"sl/3e25rj","slide":3,"title":"SMART PARKING ANALYTICS","textShapes":15}
+{"kind":"shape","id":"sh/d0z61032","slide":3,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":3,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":3,"text":"Proposta da solucao","textPreview":"Proposta da solucao","textChars":19,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/knih4byh","slide":3,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/d8bat47y","slide":3,"bbox":[80,170,220,250]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":3,"text":"1. Entrada","textPreview":"1. Entrada","textChars":10,"textLines":1,"bbox":[100,196,180,30]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":3,"text":"Imagem ou video enviado pelo dashboard web.","textPreview":"Imagem ou video enviado pelo dashboard web.","textChars":43,"textLines":1,"bbox":[100,250,170,110]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":3,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[316,258,40,50]}
+{"kind":"shape","id":"sh/dcbulwva","slide":3,"bbox":[348,170,220,250]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":3,"text":"2. YOLO","textPreview":"2. YOLO","textChars":7,"textLines":1,"bbox":[368,196,180,30]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":3,"text":"Modelo treinado detecta carros com bounding boxes.","textPreview":"Modelo treinado detecta carros com bounding boxes.","textChars":50,"textLines":1,"bbox":[368,250,170,110]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":3,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[584,258,40,50]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":3,"bbox":[616,170,220,250]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":3,"text":"3. Ocupacao","textPreview":"3. Ocupacao","textChars":11,"textLines":1,"bbox":[636,196,180,30]}
+{"kind":"textbox","id":"sh/sji5snel","slide":3,"text":"Sistema calcula ocupadas, livres e taxa.","textPreview":"Sistema calcula ocupadas, livres e taxa.","textChars":40,"textLines":1,"bbox":[636,250,170,110]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":3,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[852,258,40,50]}
+{"kind":"shape","id":"sh/adsji5sn","slide":3,"bbox":[884,170,220,250]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":3,"text":"4. Analytics","textPreview":"4. Analytics","textChars":12,"textLines":1,"bbox":[904,196,180,30]}
+{"kind":"textbox","id":"sh/svu9knih","slide":3,"text":"Historico, picos, alertas e relatorios.","textPreview":"Historico, picos, alertas e relatorios.","textChars":39,"textLines":1,"bbox":[904,250,170,110]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":3,"text":"Resultado: um produto SaaS demonstravel para monitoramento de estacionamentos com interface propria e API propria.","textPreview":"Resultado: um produto SaaS demonstravel para monitoramento de estacionamentos com interface propria e API propria.","textChars":114,"textLines":1,"bbox":[90,510,1020,48]}
+{"kind":"notes","id":"nt/3e25rj","slide":3,"text":""}
+{"kind":"slide","id":"sl/k2p6sg","slide":4,"title":"SMART PARKING ANALYTICS","textShapes":16}
+{"kind":"shape","id":"sh/xs72x4na","slide":4,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"Ciclo completo de PDI","textPreview":"Ciclo completo de PDI","textChars":21,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":4,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/1gvy90je","slide":4,"bbox":[110,145,470,48]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":4,"text":"1. Coleta/adaptacao do dataset","textPreview":"1. Coleta/adaptacao do dataset","textChars":30,"textLines":1,"bbox":[132,157,420,22]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":4,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[330,193,40,24]}
+{"kind":"shape","id":"sh/8v6psfil","slide":4,"bbox":[110,217,470,48]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":4,"text":"2. Anotacao no Roboflow","textPreview":"2. Anotacao no Roboflow","textChars":23,"textLines":1,"bbox":[132,229,420,22]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":4,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[330,265,40,24]}
+{"kind":"shape","id":"sh/k3q5o7qp","slide":4,"bbox":[110,289,470,48]}
+{"kind":"textbox","id":"sh/vixczed8","slide":4,"text":"3. Exportacao YOLO26","textPreview":"3. Exportacao YOLO26","textChars":20,"textLines":1,"bbox":[132,301,420,22]}
+{"kind":"textbox","id":"sh/2x4nap4r","slide":4,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[330,337,40,24]}
+{"kind":"shape","id":"sh/dcbulwva","slide":4,"bbox":[110,361,470,48]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":4,"text":"4. Treinamento Ultralytics","textPreview":"4. Treinamento Ultralytics","textChars":26,"textLines":1,"bbox":[132,373,420,22]}
+{"kind":"textbox","id":"sh/val87ed8","slide":4,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[330,409,40,24]}
+{"kind":"shape","id":"sh/6psfil0r","slide":4,"bbox":[110,433,470,48]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":4,"text":"5. Inferencia na API","textPreview":"5. Inferencia na API","textChars":20,"textLines":1,"bbox":[132,445,420,22]}
+{"kind":"textbox","id":"sh/knih4byh","slide":4,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[330,481,40,24]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":4,"bbox":[110,505,470,48]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":4,"text":"6. Dashboard e relatorios","textPreview":"6. Dashboard e relatorios","textChars":25,"textLines":1,"bbox":[132,517,420,22]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":4,"bbox":[710,150,400,350]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":4,"text":"O que sera demonstrado","textPreview":"O que sera demonstrado","textChars":22,"textLines":1,"bbox":[746,185,330,28]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":4,"text":"- Modelo treinado, nao pre-treinado puro.\n- API FastAPI consumindo o peso final.\n- Frontend React proprio.\n- Calculo de ocupacao e relatorios.\n- Evidencias de metricas e teste.","textPreview":"- Modelo treinado, nao pre-treinado puro. | - API FastAPI consumindo o peso final. | - Frontend React proprio. | - Calculo de ocupacao e ...","textChars":176,"textLines":5,"bbox":[750,242,310,210]}
+{"kind":"notes","id":"nt/k2p6sg","slide":4,"text":""}
+{"kind":"slide","id":"sl/fijvdd","slide":5,"title":"SMART PARKING ANALYTICS","textShapes":12}
+{"kind":"shape","id":"sh/9knih4by","slide":5,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":5,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":5,"text":"Dataset personalizado","textPreview":"Dataset personalizado","textChars":21,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":5,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/9w3m94fu","slide":5,"bbox":[74,150,230,116]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":5,"text":"Total de imagens","textPreview":"Total de imagens","textChars":16,"textLines":1,"bbox":[92,166,194,24]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":5,"text":"166","textPreview":"166","textChars":3,"textLines":1,"bbox":[92,194,194,54]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":5,"bbox":[326,150,260,116]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":5,"text":"Objetos anotados","textPreview":"Objetos anotados","textChars":16,"textLines":1,"bbox":[344,166,224,24]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":5,"text":"6688","textPreview":"6688","textChars":4,"textLines":1,"bbox":[344,194,224,54]}
+{"kind":"shape","id":"sh/c7u54zid","slide":5,"bbox":[608,150,230,116]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":5,"text":"Classes","textPreview":"Classes","textChars":7,"textLines":1,"bbox":[626,166,194,24]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":5,"text":"1: car","textPreview":"1: car","textChars":6,"textLines":1,"bbox":[626,194,194,54]}
+{"kind":"shape","id":"sh/1032lszq","slide":5,"bbox":[860,150,230,116]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":5,"text":"Formato","textPreview":"Formato","textChars":7,"textLines":1,"bbox":[878,166,194,24]}
+{"kind":"textbox","id":"sh/judg7ads","slide":5,"text":"YOLO26","textPreview":"YOLO26","textChars":6,"textLines":1,"bbox":[878,194,194,54]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":5,"text":"- Split: 103 train, 34 validation, 29 test.\n- Dataset exportado do Roboflow e ajustado para classe unica car.\n- A simplificacao reduziu confusao entre carro, van e moto na demonstracao.\n- O escopo final e adequado para estacionamentos onde o objetivo e detectar carros e calcular ocupacao.","textPreview":"- Split: 103 train, 34 validation, 29 test. | - Dataset exportado do Roboflow e ajustado para classe unica car. | - A simplificacao reduz...","textChars":289,"textLines":4,"bbox":[90,330,980,210]}
+{"kind":"notes","id":"nt/fijvdd","slide":5,"text":""}
+{"kind":"slide","id":"sl/je6pyh","slide":6,"title":"SMART PARKING ANALYTICS","textShapes":5}
+{"kind":"shape","id":"sh/83itgfml","slide":6,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":6,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":6,"text":"Treinamento do modelo","textPreview":"Treinamento do modelo","textChars":21,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":6,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":6,"bbox":[720,150,410,390]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":6,"text":"Configuracao","textPreview":"Configuracao","textChars":12,"textLines":1,"bbox":[750,180,330,32]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":6,"text":"- Modelo base: yolo26n.pt\n- Tarefa: Object Detection\n- Epochs: 100\n- Image size: 640\n- Batch: 4\n- Peso final: backend/models/best.pt","textPreview":"- Modelo base: yolo26n.pt | - Tarefa: Object Detection | - Epochs: 100 | - Image size: 640 | - Batch: 4 | - Peso final: backend/models/be...","textChars":132,"textLines":6,"bbox":[750,230,340,245]}
+{"kind":"image","id":"im/l0rqd4vm","slide":6,"name":"","geometry":"roundRect","alt":"Grafico de resultados","bbox":[72,140,600,410]}
+{"kind":"notes","id":"nt/je6pyh","slide":6,"text":""}
+{"kind":"slide","id":"sl/yfzoh3","slide":7,"title":"SMART PARKING ANALYTICS","textShapes":13}
+{"kind":"shape","id":"sh/p4r65wju","slide":7,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":7,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":7,"text":"Metricas obtidas","textPreview":"Metricas obtidas","textChars":16,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":7,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":7,"bbox":[80,145,240,116]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":7,"text":"Precision val","textPreview":"Precision val","textChars":13,"textLines":1,"bbox":[98,161,204,24]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":7,"text":"0.915","textPreview":"0.915","textChars":5,"textLines":1,"bbox":[98,189,204,54]}
+{"kind":"shape","id":"sh/0z61032l","slide":7,"bbox":[350,145,240,116]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":7,"text":"Recall val","textPreview":"Recall val","textChars":10,"textLines":1,"bbox":[368,161,204,24]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":7,"text":"0.885","textPreview":"0.885","textChars":5,"textLines":1,"bbox":[368,189,204,54]}
+{"kind":"shape","id":"sh/cbulwval","slide":7,"bbox":[620,145,240,116]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":7,"text":"mAP50 val","textPreview":"mAP50 val","textChars":9,"textLines":1,"bbox":[638,161,204,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":7,"text":"0.930","textPreview":"0.930","textChars":5,"textLines":1,"bbox":[638,189,204,54]}
+{"kind":"shape","id":"sh/5kb6xkf6","slide":7,"bbox":[890,145,260,116]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":7,"text":"mAP50-95 val","textPreview":"mAP50-95 val","textChars":12,"textLines":1,"bbox":[908,161,224,24]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":7,"text":"0.871","textPreview":"0.871","textChars":5,"textLines":1,"bbox":[908,189,224,54]}
+{"kind":"shape","id":"sh/58z25kb6","slide":7,"bbox":[580,330,520,260]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":7,"text":"Leitura para a banca","textPreview":"Leitura para a banca","textChars":20,"textLines":1,"bbox":[612,360,440,28]}
+{"kind":"textbox","id":"sh/cvixczed","slide":7,"text":"- mAP50 acima de 0.90 indica boa deteccao para a demo.\n- Recall alto significa que poucos carros deixam de ser detectados.\n- mAP50-95 mostra qualidade mais exigente das caixas.\n- O split test separado confirmou generalizacao: mAP50 test 0.921.","textPreview":"- mAP50 acima de 0.90 indica boa deteccao para a demo. | - Recall alto significa que poucos carros deixam de ser detectados. | - mAP50-95...","textChars":243,"textLines":4,"bbox":[612,412,430,150]}
+{"kind":"image","id":"im/tovahoza","slide":7,"name":"","geometry":"roundRect","alt":"Matriz de confusao","bbox":[110,315,410,300]}
+{"kind":"notes","id":"nt/yfzoh3","slide":7,"text":""}
+{"kind":"slide","id":"sl/pcl5fn","slide":8,"title":"SMART PARKING ANALYTICS","textShapes":15}
+{"kind":"shape","id":"sh/8nqxs72x","slide":8,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":8,"text":"Arquitetura profissional","textPreview":"Arquitetura profissional","textChars":24,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":8,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/8bat47y1","slide":8,"bbox":[70,170,210,70]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":8,"text":"React + Vite","textPreview":"React + Vite","textChars":12,"textLines":1,"bbox":[90,192,170,30]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":8,"bbox":[350,170,210,70]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":8,"text":"FastAPI","textPreview":"FastAPI","textChars":7,"textLines":1,"bbox":[370,192,170,30]}
+{"kind":"shape","id":"sh/c3ylc7u5","slide":8,"bbox":[630,170,210,70]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":8,"text":"YOLO Service","textPreview":"YOLO Service","textChars":12,"textLines":1,"bbox":[650,192,170,30]}
+{"kind":"shape","id":"sh/zidonyd0","slide":8,"bbox":[910,170,230,70]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":8,"text":"Banco de Dados","textPreview":"Banco de Dados","textChars":14,"textLines":1,"bbox":[930,192,190,30]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":8,"bbox":[350,360,210,70]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":8,"text":"Analytics","textPreview":"Analytics","textChars":9,"textLines":1,"bbox":[370,382,170,30]}
+{"kind":"shape","id":"sh/za1gvy90","slide":8,"bbox":[630,360,250,70]}
+{"kind":"textbox","id":"sh/svu9knih","slide":8,"text":"Relatorios PDF/CSV","textPreview":"Relatorios PDF/CSV","textChars":18,"textLines":1,"bbox":[650,382,210,30]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":8,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[295,185,40,34]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":8,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[575,185,40,34]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":8,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[855,185,40,34]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":8,"text":"v","textPreview":"v","textChars":1,"textLines":1,"bbox":[455,262,34,44]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":8,"text":">","textPreview":">","textChars":1,"textLines":1,"bbox":[575,375,40,34]}
+{"kind":"textbox","id":"sh/d0z61032","slide":8,"text":"Local: SQLite. Deploy: PostgreSQL no Render via DATABASE_URL. Frontend pode ficar na Vercel consumindo a API.","textPreview":"Local: SQLite. Deploy: PostgreSQL no Render via DATABASE_URL. Frontend pode ficar na Vercel consumindo a API.","textChars":109,"textLines":1,"bbox":[90,535,1040,58]}
+{"kind":"notes","id":"nt/pcl5fn","slide":8,"text":""}
+{"kind":"slide","id":"sl/nttpwm","slide":9,"title":"SMART PARKING ANALYTICS","textShapes":8}
+{"kind":"shape","id":"sh/w7mp0bi9","slide":9,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":9,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":9,"text":"Logica de estacionamento revisada","textPreview":"Logica de estacionamento revisada","textChars":33,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":9,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/wval87ed","slide":9,"bbox":[80,150,500,330]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":9,"text":"Modo por capacidade","textPreview":"Modo por capacidade","textChars":19,"textLines":1,"bbox":[112,184,390,32]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":9,"text":"- Usado quando nao ha poligonos confiaveis.\n- ocupadas = min(carros_detectados, total_vagas)\n- livres = total_vagas - ocupadas\n- taxa = ocupadas / total_vagas","textPreview":"- Usado quando nao ha poligonos confiaveis. | - ocupadas = min(carros_detectados, total_vagas) | - livres = total_vagas - ocupadas | - ta...","textChars":158,"textLines":4,"bbox":[112,246,390,180]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":9,"bbox":[700,150,500,330]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":9,"text":"Modo por poligonos","textPreview":"Modo por poligonos","textChars":18,"textLines":1,"bbox":[732,184,390,32]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":9,"text":"- Usado para camera fixa e calibrada.\n- Cada vaga tem um poligono.\n- Carro ocupa vaga quando sua bbox sobrepoe a regiao.\n- Permite dizer quais vagas estao livres.","textPreview":"- Usado para camera fixa e calibrada. | - Cada vaga tem um poligono. | - Carro ocupa vaga quando sua bbox sobrepoe a regiao. | - Permite ...","textChars":162,"textLines":4,"bbox":[732,246,390,180]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":9,"text":"Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.","textPreview":"Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.","textChars":140,"textLines":1,"bbox":[105,550,1010,52]}
+{"kind":"notes","id":"nt/nttpwm","slide":9,"text":""}
+{"kind":"slide","id":"sl/w4h735","slide":10,"title":"SMART PARKING ANALYTICS","textShapes":9}
+{"kind":"shape","id":"sh/8nqxs72x","slide":10,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":10,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":10,"text":"Demonstracao funcional","textPreview":"Demonstracao funcional","textChars":22,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":10,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":10,"bbox":[730,150,420,380]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":10,"text":"Resultado do teste real","textPreview":"Resultado do teste real","textChars":23,"textLines":1,"bbox":[760,180,340,28]}
+{"kind":"shape","id":"sh/1kre1w7m","slide":10,"bbox":[760,235,320,116]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":10,"text":"Carros detectados","textPreview":"Carros detectados","textChars":17,"textLines":1,"bbox":[778,251,284,24]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":10,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[778,279,284,54]}
+{"kind":"shape","id":"sh/zidonyd0","slide":10,"bbox":[760,365,320,116]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":10,"text":"Vagas livres","textPreview":"Vagas livres","textChars":12,"textLines":1,"bbox":[778,381,284,24]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":10,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[778,409,284,54]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":10,"text":"Capacidade cadastrada: 40 vagas. Modo usado: capacity_only.","textPreview":"Capacidade cadastrada: 40 vagas. Modo usado: capacity_only.","textChars":59,"textLines":1,"bbox":[760,500,340,42]}
+{"kind":"image","id":"im/pwb2hwfy","slide":10,"name":"","geometry":"roundRect","alt":"Imagem anotada pela API","bbox":[70,140,610,420]}
+{"kind":"notes","id":"nt/w4h735","slide":10,"text":""}
+{"kind":"slide","id":"sl/415plu","slide":11,"title":"SMART PARKING ANALYTICS","textShapes":6}
+{"kind":"shape","id":"sh/1orytsvu","slide":11,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":11,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":11,"text":"API e interface propria","textPreview":"API e interface propria","textChars":23,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":11,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"textbox","id":"sh/1032lszq","slide":11,"text":"- POST /api/predict: inferencia em imagem.\n- POST /api/video/upload: processamento de video por frames.\n- POST /api/parking-spots/capacity: capacidade total.\n- POST /api/parking-spots: poligonos calibrados.\n- GET /api/statistics, /history, /reports: analytics e relatorios.","textPreview":"- POST /api/predict: inferencia em imagem. | - POST /api/video/upload: processamento de video por frames. | - POST /api/parking-spots/cap...","textChars":273,"textLines":5,"bbox":[90,145,540,340]}
+{"kind":"shape","id":"sh/u9knih4b","slide":11,"bbox":[710,150,420,340]}
+{"kind":"textbox","id":"sh/judg7ads","slide":11,"text":"Dashboard React","textPreview":"Dashboard React","textChars":15,"textLines":1,"bbox":[744,184,330,30]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":11,"text":"- Upload de imagem e video.\n- Cards de ocupacao.\n- Graficos temporais.\n- Imagem anotada.\n- PDF e CSV.","textPreview":"- Upload de imagem e video. | - Cards de ocupacao. | - Graficos temporais. | - Imagem anotada. | - PDF e CSV.","textChars":101,"textLines":5,"bbox":[744,246,330,180]}
+{"kind":"notes","id":"nt/415plu","slide":11,"text":""}
+{"kind":"slide","id":"sl/sz2i7l","slide":12,"title":"SMART PARKING ANALYTICS","textShapes":16}
+{"kind":"shape","id":"sh/fa9w3m94","slide":12,"bbox":[0,0,1280,8]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":12,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,34,420,24]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":12,"text":"Checklist da avaliacao","textPreview":"Checklist da avaliacao","textChars":22,"textLines":1,"bbox":[64,62,940,58]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":12,"text":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textPreview":"Disciplina de Processamento Digital de Imagens e Visao Computacional","textChars":68,"textLines":1,"bbox":[64,682,760,22]}
+{"kind":"shape","id":"sh/fyxobm58","slide":12,"bbox":[100,150,420,82]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":12,"text":"Treinamento proprio","textPreview":"Treinamento proprio","textChars":19,"textLines":1,"bbox":[122,168,260,26]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":12,"text":"2.5 / 2.5","textPreview":"2.5 / 2.5","textChars":9,"textLines":1,"bbox":[400,166,100,40]}
+{"kind":"shape","id":"sh/q1orytsv","slide":12,"bbox":[100,280,420,82]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":12,"text":"Uso correto do YOLO","textPreview":"Uso correto do YOLO","textChars":19,"textLines":1,"bbox":[122,298,260,26]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":12,"text":"1.5 / 1.5","textPreview":"1.5 / 1.5","textChars":9,"textLines":1,"bbox":[400,296,100,40]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":12,"bbox":[100,410,420,82]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":12,"text":"GUI propria + API","textPreview":"GUI propria + API","textChars":17,"textLines":1,"bbox":[122,428,260,26]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":12,"text":"2.0 / 2.0","textPreview":"2.0 / 2.0","textChars":9,"textLines":1,"bbox":[400,426,100,40]}
+{"kind":"shape","id":"sh/j2t83itg","slide":12,"bbox":[680,150,420,82]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":12,"text":"Robustez e aplicabilidade","textPreview":"Robustez e aplicabilidade","textChars":25,"textLines":1,"bbox":[702,168,260,26]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":12,"text":"1.5 / 1.5","textPreview":"1.5 / 1.5","textChars":9,"textLines":1,"bbox":[980,166,100,40]}
+{"kind":"shape","id":"sh/8nqxs72x","slide":12,"bbox":[680,280,420,82]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":12,"text":"Apresentacao oral","textPreview":"Apresentacao oral","textChars":17,"textLines":1,"bbox":[702,298,260,26]}
+{"kind":"textbox","id":"sh/ulwval87","slide":12,"text":"1.5 / 1.5","textPreview":"1.5 / 1.5","textChars":9,"textLines":1,"bbox":[980,296,100,40]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":12,"bbox":[680,410,420,82]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":12,"text":"Repositorio organizado","textPreview":"Repositorio organizado","textChars":22,"textLines":1,"bbox":[702,428,260,26]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":12,"text":"1.0 / 1.0","textPreview":"1.0 / 1.0","textChars":9,"textLines":1,"bbox":[980,426,100,40]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":12,"text":"Ponto critico para defender: o modelo foi treinado; a aplicacao usa API propria; a ocupacao e calculada com regra de negocio, historico e relatorios.","textPreview":"Ponto critico para defender: o modelo foi treinado; a aplicacao usa API propria; a ocupacao e calculada com regra de negocio, historico e...","textChars":149,"textLines":1,"bbox":[100,560,1000,50]}
+{"kind":"notes","id":"nt/sz2i7l","slide":12,"text":""}
+{"kind":"slide","id":"sl/5c2d03","slide":13,"title":"Roteiro da demo ao vivo","textShapes":3}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":13,"text":"Roteiro da demo ao vivo","textPreview":"Roteiro da demo ao vivo","textChars":23,"textLines":1,"bbox":[72,70,820,64]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":13,"text":"- Abrir frontend e mostrar dashboard.\n- Cadastrar capacidade total de vagas.\n- Enviar imagem ou video.\n- Mostrar deteccoes, ocupacao, livres e alerta.\n- Abrir metricas de treinamento e explicar mAP/precision/recall.\n- Encerrar com arquitetura e aplicabilidade real.","textPreview":"- Abrir frontend e mostrar dashboard. | - Cadastrar capacidade total de vagas. | - Enviar imagem ou video. | - Mostrar deteccoes, ocupaca...","textChars":265,"textLines":6,"bbox":[100,170,860,310]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":13,"text":"Fechamento: o projeto cobre o ciclo completo de PDI: dataset -> treinamento -> inferencia -> API -> interface -> analytics.","textPreview":"Fechamento: o projeto cobre o ciclo completo de PDI: dataset -> treinamento -> inferencia -> API -> interface -> analytics.","textChars":123,"textLines":1,"bbox":[100,560,980,52]}
+{"kind":"notes","id":"nt/5c2d03","slide":13,"text":""}

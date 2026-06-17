@@ -1,0 +1,41 @@
+﻿ROTEIRO SEGURO - SMART PARKING ANALYTICS
+
+1. Antes da apresentação
+- Abrir backend: http://127.0.0.1:8000/health
+- Abrir Swagger: http://127.0.0.1:8000/docs
+- Abrir frontend: http://127.0.0.1:5173/
+- Confirmar que o backend mostra loaded:models\best.pt em uma inferência.
+
+2. Imagens recomendadas para demonstrar
+- Usar primeiro uma imagem do dataset/teste, pois pertence ao mesmo domínio do treinamento.
+- Imagem de inferência boa já gerada: backend/outputs/evt_41ea7faa362f.jpg
+- Imagem para explicar vagas/polígonos: backend/outputs/evt_bd65a5c64807.jpg
+- Gráfico de treino: docs/training-results/results.png
+- Matriz de confusão: docs/training-results/confusion_matrix.png
+
+3. Evitar na demonstração principal
+- Não começar pelo vídeo top-down novo que retornou 0 detecções.
+- Não prometer que o modelo generaliza para qualquer câmera sem retreino.
+- Não dizer que as métricas estão excelentes; diga que o pipeline está completo e o dataset será expandido.
+
+4. Fala curta sobre limitação
+"O modelo foi treinado com dataset personalizado e está integrado à aplicação. Como o dataset inicial ainda é pequeno e desbalanceado, alguns ângulos top-down novos reduzem o recall. A evolução natural do projeto é incorporar as 837 imagens anotadas no Roboflow e retreinar para melhorar mAP e generalização."
+
+5. Ordem da demo ao vivo
+- Mostrar README e checklist.
+- Mostrar backend /health.
+- Mostrar frontend.
+- Enviar uma imagem validada.
+- Mostrar imagem anotada, vagas ocupadas/livres e taxa de ocupação.
+- Mostrar histórico/gráficos.
+- Exportar CSV ou PDF.
+
+6. Pergunta provável do professor
+P: É modelo pré-treinado?
+R: Não. O projeto usa um modelo base YOLO, mas o peso carregado é backend/models/best.pt, treinado com dataset personalizado exportado do Roboflow.
+
+P: Por que as vagas não são treinadas?
+R: Nesta arquitetura, as vagas são configuração fixa da câmera por polígonos. O YOLO detecta veículos; o backend cruza os veículos com os polígonos para calcular ocupação.
+
+P: Por que algumas imagens falham?
+R: Porque o dataset inicial é pequeno e o domínio visual muda. Isso é uma limitação esperada de generalização e será corrigida com mais imagens anotadas e retreino.

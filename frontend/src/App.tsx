@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+﻿import { useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, BarChart3, Car, Download, Gauge, ParkingCircle, UploadCloud, Video } from "lucide-react";
 import {
   Area,
@@ -12,7 +12,7 @@ import {
   YAxis
 } from "recharts";
 import { MetricCard } from "./components/MetricCard";
-import { PredictionResponse, createReport, fetchHistory, fetchStatistics, predictImage, uploadVideo } from "./api/client";
+import { PredictionResponse, createReport, fetchHistory, fetchStatistics, predictImage, saveParkingCapacity, uploadVideo } from "./api/client";
 
 const apiOrigin = import.meta.env.VITE_API_ORIGIN ?? "http://127.0.0.1:8000";
 
@@ -23,6 +23,7 @@ export function App() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("Envie uma imagem para iniciar a analise.");
   const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
+  const [capacity, setCapacity] = useState(40);
   const imageInputRef = useRef<HTMLInputElement>(null);
   const videoInputRef = useRef<HTMLInputElement>(null);
 
@@ -59,7 +60,7 @@ export function App() {
       const data = await predictImage(file);
       setPrediction(data);
       await refreshAnalytics();
-      setMessage(data.alert ?? "Analise concluida com sucesso.");
+      setMessage(data.alert ?? data.inference_note ?? "Analise concluida com sucesso.");
     } catch (error) {
       setMessage("Nao foi possivel processar a imagem. Verifique se a API esta online.");
     } finally {
@@ -78,7 +79,7 @@ export function App() {
         setPrediction(data.summary);
         await refreshAnalytics();
       }
-      setMessage(`${data.message ?? "Video processado."} Job: ${data.job_id}`);
+      setMessage(data.summary?.inference_note ?? `${data.message ?? "Video processado."} Job: ${data.job_id}`);
     } catch {
       setMessage("Nao foi possivel enviar o video.");
     } finally {
@@ -89,6 +90,25 @@ export function App() {
   async function downloadReport(format: "pdf" | "csv") {
     const report = await createReport(format);
     window.open(`${apiOrigin}${report.report_url}`, "_blank");
+  }
+
+  async function handleCapacitySave() {
+    setLoading(true);
+    setMessage("Salvando capacidade do estacionamento...");
+    try {
+      const result = await saveParkingCapacity({
+        parking_lot_id: "default",
+        parking_lot_name: "Campus Parking",
+        location: "Universidade",
+        total_spots: capacity
+      });
+      await refreshAnalytics();
+      setMessage(`Capacidade cadastrada: ${result.total_spots} vagas. Agora envie uma imagem ou video.`);
+    } catch {
+      setMessage("Nao foi possivel cadastrar a capacidade. Verifique se a API esta online.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const latest = history[history.length - 1];
@@ -137,7 +157,7 @@ export function App() {
         </section>
 
         {message && (
-          <section className={`notice ${prediction?.alert ? "alert" : ""}`}>
+          <section className={`notice ${prediction?.alert || prediction?.inference_note ? "alert" : ""}`}>
             <AlertTriangle size={18} />
             <span>{message}</span>
           </section>
@@ -146,6 +166,17 @@ export function App() {
         <section className="workspace-grid" id="upload">
           <div className="panel upload-panel">
             <h2>Entrada de midia</h2>
+            <div className="capacity-row">
+              <label htmlFor="capacity-input">Total de vagas</label>
+              <input
+                id="capacity-input"
+                type="number"
+                min="1"
+                value={capacity}
+                onChange={(event) => setCapacity(Number(event.target.value))}
+              />
+              <button onClick={handleCapacitySave} disabled={loading || capacity < 1}>Salvar capacidade</button>
+            </div>
             <div className="upload-actions">
               <div className="upload-box">
                 <UploadCloud />
@@ -187,6 +218,12 @@ export function App() {
                   <span><i className="dot occupied" /> vaga ocupada</span>
                   <span>{prediction.occupied_spot_ids?.length ?? 0} vagas atribuidas</span>
                 </div>
+                <div className="diagnostic-grid">
+                  <span>Modo: {prediction.calibration_status ?? "configured"}</span>
+                  <span>Metodo: {prediction.assignment_method ?? "bbox_overlap"}</span>
+                  <span>Vagas calibradas: {prediction.spots_configured ?? total}</span>
+                </div>
+                {prediction.inference_note && <p className="diagnostic-line">{prediction.inference_note}</p>}
               </>
             ) : (
               <div className="empty-preview">Selecione uma imagem ou video para ver vagas livres e ocupadas.</div>
@@ -255,3 +292,4 @@ export function App() {
     </main>
   );
 }
+

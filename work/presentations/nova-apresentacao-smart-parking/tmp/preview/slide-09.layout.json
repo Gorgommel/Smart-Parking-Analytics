@@ -1,0 +1,766 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/nttpwm",
+    "id": "nttpwm",
+    "slide": 9,
+    "layoutId": "7a66234c-353f-47da-9653-e3cc0a9d2ab7",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F8FAFC",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "7a66234c-353f-47da-9653-e3cc0a9d2ab7",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "7fd7792f-d24b-41b2-963c-ffe8ca8ff56c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w7mp0bi9",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        8
+      ],
+      "geometry": "rect",
+      "fillColor": "#0F766E",
+      "lineColor": "#0F766E",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mp0bi9s",
+      "id": "2",
+      "bbox": [
+        64,
+        34,
+        420,
+        24
+      ],
+      "geometry": "rect",
+      "text": "SMART PARKING ANALYTICS",
+      "textPreview": "SMART PARKING ANALYTICS",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "Aptos",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SMART PARKING ANALYTICS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SMART PARKING ANALYTICS",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos",
+            "color": "#0F766E",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SMART PARKING ANALYTICS",
+              "fontSize": 12,
+              "typeface": "Aptos",
+              "color": "#0F766E",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1w7mp0b",
+      "id": "3",
+      "bbox": [
+        64,
+        62,
+        940,
+        58
+      ],
+      "geometry": "rect",
+      "text": "Logica de estacionamento revisada",
+      "textPreview": "Logica de estacionamento revisada",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "Aptos Display",
+        "color": "#0F172A",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Logica de estacionamento revisada"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Logica de estacionamento revisada",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Aptos Display",
+            "color": "#0F172A",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Logica de estacionamento revisada",
+              "fontSize": 34,
+              "typeface": "Aptos Display",
+              "color": "#0F172A",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3ex0nu",
+      "id": "4",
+      "bbox": [
+        64,
+        682,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+      "textPreview": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "fontSize": 11,
+        "typeface": "Aptos",
+        "color": "#64748B",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos",
+            "color": "#64748B"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Disciplina de Processamento Digital de Imagens e Visao Computacional",
+              "fontSize": 11,
+              "typeface": "Aptos",
+              "color": "#64748B"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wval87ed",
+      "id": "5",
+      "bbox": [
+        80,
+        150,
+        500,
+        330
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F0FDFA",
+      "lineColor": "#5EEAD4",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7adsji5s",
+      "id": "6",
+      "bbox": [
+        112,
+        184,
+        390,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Modo por capacidade",
+      "textPreview": "Modo por capacidade",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "Aptos",
+        "color": "#0F766E",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Modo por capacidade"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Modo por capacidade",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Aptos",
+            "color": "#0F766E",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Modo por capacidade",
+              "fontSize": 26,
+              "typeface": "Aptos",
+              "color": "#0F766E",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/epkzupwb",
+      "id": "7",
+      "bbox": [
+        112,
+        246,
+        390,
+        180
+      ],
+      "geometry": "rect",
+      "text": "- Usado quando nao ha poligonos confiaveis.\n- ocupadas = min(carros_detectados, total_vagas)\n- livres = total_vagas - ocupadas\n- taxa = ocupadas / total_vagas",
+      "textPreview": "- Usado quando nao ha poligonos confiaveis. | - ocupadas = min(carros_detectados, total_vagas) | - livres = total_vagas - ocupadas | - ta...",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Aptos",
+        "color": "#0F172A",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 6,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- Usado quando nao ha poligonos"
+          },
+          {
+            "index": 2,
+            "text": "confiaveis."
+          },
+          {
+            "index": 3,
+            "text": "- ocupadas = min(carros_detectados,"
+          },
+          {
+            "index": 4,
+            "text": "total_vagas)"
+          },
+          {
+            "index": 5,
+            "text": "- livres = total_vagas - ocupadas"
+          },
+          {
+            "index": 6,
+            "text": "- taxa = ocupadas / total_vagas"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- Usado quando nao ha poligonos confiaveis.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Usado quando nao ha poligonos confiaveis.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- ocupadas = min(carros_detectados, total_vagas)",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- ocupadas = min(carros_detectados, total_vagas)",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- livres = total_vagas - ocupadas",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- livres = total_vagas - ocupadas",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- taxa = ocupadas / total_vagas",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- taxa = ocupadas / total_vagas",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc7u54zi",
+      "id": "8",
+      "bbox": [
+        700,
+        150,
+        500,
+        330
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EFF6FF",
+      "lineColor": "#93C5FD",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wra5gbq1",
+      "id": "9",
+      "bbox": [
+        732,
+        184,
+        390,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Modo por poligonos",
+      "textPreview": "Modo por poligonos",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "fontSize": 26,
+        "typeface": "Aptos",
+        "color": "#2563EB",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Modo por poligonos"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Modo por poligonos",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Aptos",
+            "color": "#2563EB",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Modo por poligonos",
+              "fontSize": 26,
+              "typeface": "Aptos",
+              "color": "#2563EB",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upwb2hwf",
+      "id": "10",
+      "bbox": [
+        732,
+        246,
+        390,
+        180
+      ],
+      "geometry": "rect",
+      "text": "- Usado para camera fixa e calibrada.\n- Cada vaga tem um poligono.\n- Carro ocupa vaga quando sua bbox sobrepoe a regiao.\n- Permite dizer quais vagas estao livres.",
+      "textPreview": "- Usado para camera fixa e calibrada. | - Cada vaga tem um poligono. | - Carro ocupa vaga quando sua bbox sobrepoe a regiao. | - Permite ...",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Aptos",
+        "color": "#0F172A",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "- Usado para camera fixa e calibrada."
+          },
+          {
+            "index": 2,
+            "text": "- Cada vaga tem um poligono."
+          },
+          {
+            "index": 3,
+            "text": "- Carro ocupa vaga quando sua bbox"
+          },
+          {
+            "index": 4,
+            "text": "sobrepoe a regiao."
+          },
+          {
+            "index": 5,
+            "text": "- Permite dizer quais vagas estao livres."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "- Usado para camera fixa e calibrada.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Usado para camera fixa e calibrada.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "- Cada vaga tem um poligono.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Cada vaga tem um poligono.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 3,
+          "text": "- Carro ocupa vaga quando sua bbox sobrepoe a regiao.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Carro ocupa vaga quando sua bbox sobrepoe a regiao.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "- Permite dizer quais vagas estao livres.",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos",
+            "color": "#0F172A"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "- Permite dizer quais vagas estao livres.",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#0F172A"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nap4r65w",
+      "id": "11",
+      "bbox": [
+        105,
+        550,
+        1010,
+        52
+      ],
+      "geometry": "rect",
+      "text": "Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.",
+      "textPreview": "Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "fontSize": 23,
+        "typeface": "Aptos",
+        "color": "#DC2626",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os"
+          },
+          {
+            "index": 2,
+            "text": "dois cenarios de forma transparente."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Aptos",
+            "color": "#DC2626",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Mensagem-chave: detectar carros e identificar vagas livres sao problemas diferentes. O sistema trata os dois cenarios de forma transparente.",
+              "fontSize": 23,
+              "typeface": "Aptos",
+              "color": "#DC2626",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,9 +1,11 @@
-from datetime import datetime
+﻿from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
 
 from app.core.config import get_settings
 from app.db.database import get_connection
+from PIL import Image
+
 from app.services.occupancy_service import assign_spots, load_spots
 from app.services.yolo_service import yolo_service
 
@@ -19,12 +21,22 @@ def process_image_prediction(
     timestamp = datetime.now().isoformat(timespec="seconds")
 
     detections = yolo_service.predict(image_path)
-    occupancy = assign_spots(parking_lot_id, detections)
+    with Image.open(image_path) as image:
+        image_size = image.size
+    occupancy = assign_spots(parking_lot_id, detections, image_size)
     spots = load_spots(parking_lot_id)
     occupied_spot_codes = {item["spot_id"] for item in detections if item.get("spot_id")}
     yolo_service.annotate(image_path, detections, output_path, spots, occupied_spot_codes)
 
     alert = None
+    inference_note = None
+    if occupancy.get("calibration_note"):
+        inference_note = occupancy["calibration_note"]
+    elif len(detections) == 0 and occupancy["total_spots"] > 0:
+        inference_note = (
+            "Nenhum veiculo foi detectado neste frame. "
+            "Isso normalmente indica que o modelo ainda precisa de mais imagens desse angulo/camera no dataset."
+        )
     if occupancy["occupancy_rate"] >= settings.occupancy_alert_threshold:
         alert = "Estacionamento proximo da lotacao."
 
@@ -102,7 +114,10 @@ def process_image_prediction(
         "vehicles_detected": len(detections),
         "detections": detections,
         "alert": alert,
+        "inference_note": inference_note,
         "annotated_image_url": f"/static/outputs/{output_path.name}",
         "occupied_spot_ids": sorted(occupied_spot_codes),
         **occupancy,
     }
+
+

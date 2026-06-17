@@ -1,0 +1,1 @@
+QA visual executado: 13 slides renderizados em PNG e montage. Arquivo final: C:\Users\Isaac\Documents\v2\Smart-Parking-Analytics\apresentacao\Smart-Parking-Analytics-Apresentacao-Final.pptx

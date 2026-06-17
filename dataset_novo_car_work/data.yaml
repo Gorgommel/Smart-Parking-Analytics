@@ -1,0 +1,8 @@
+path: C:/Users/Isaac/Documents/v2/Smart-Parking-Analytics/dataset_novo_car_work
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 1
+names:
+  0: car

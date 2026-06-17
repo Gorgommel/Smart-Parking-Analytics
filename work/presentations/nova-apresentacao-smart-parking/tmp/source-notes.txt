@@ -1,0 +1,7 @@
+Fontes e evidencias usadas na apresentacao
+
+- README.md, checklist-avaliacao.md e codigo backend/frontend.
+- Dataset final: dataset/data.yaml e docs/training-results/training-summary.md.
+- Metricas reais: Precision 0.915, Recall 0.885, mAP50 0.930, mAP50-95 0.871 em validation.
+- Metricas reais no test: Precision 0.913, Recall 0.919, mAP50 0.921, mAP50-95 0.865.
+- Imagens reais: results.png, confusion_matrix.png e backend/outputs/capacity_demo_test.jpg.

@@ -1,0 +1,10 @@
+path: C:/Users/Isaac/Documents/v2/Smart-Parking-Analytics/dataset
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: car
+  1: motorcycle
+  2: pickup
+  3: van

@@ -1,0 +1,239 @@
+{"kind":"deck","id":"pr/zmrvuh","name":"Deck"}
+{"kind":"layout","layoutId":"b89413e8-dc61-434b-b460-33f0f6517f90","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"06d45010-f2c5-4859-92f9-5f9353a8c30e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/4p0c4t","slide":1,"title":"Smart Parking","textShapes":7}
+{"kind":"shape","id":"sh/loj2t83i","slide":1,"bbox":[700,0,580,720]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":1,"text":"Smart Parking\nAnalytics","textPreview":"Smart Parking | Analytics","textChars":23,"textLines":2,"bbox":[64,130,560,150]}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":1,"text":"Sistema inteligente de estacionamento com YOLO, API FastAPI e dashboard React.","textPreview":"Sistema inteligente de estacionamento com YOLO, API FastAPI e dashboard React.","textChars":78,"textLines":1,"bbox":[64,314,560,74]}
+{"kind":"shape","id":"sh/lwval87e","slide":1,"bbox":[64,430,210,34]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":1,"text":"Modelo proprio treinado","textPreview":"Modelo proprio treinado","textChars":23,"textLines":1,"bbox":[78,437,182,20]}
+{"kind":"shape","id":"sh/3q5o7qpg","slide":1,"bbox":[290,430,200,34]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":1,"text":"Dataset personalizado","textPreview":"Dataset personalizado","textChars":21,"textLines":1,"bbox":[304,437,172,20]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":1,"bbox":[505,430,120,34]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":1,"text":"Demo web","textPreview":"Demo web","textChars":8,"textLines":1,"bbox":[519,437,92,20]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":1,"text":"Roteiro seguro: dataset -> treinamento -> API -> interface -> demonstracao.","textPreview":"Roteiro seguro: dataset -> treinamento -> API -> interface -> demonstracao.","textChars":75,"textLines":1,"bbox":[64,520,560,54]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":1,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 1/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 1/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"image","id":"im/fil0rqd4","slide":1,"name":"","geometry":"roundRect","alt":"inference","bbox":[728,78,500,300]}
+{"kind":"notes","id":"nt/4p0c4t","slide":1,"text":""}
+{"kind":"slide","id":"sl/l0kycm","slide":2,"title":"SMART PARKING ANALYTICS","textShapes":15}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":2,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":2,"text":"Problema real e objetivo do sistema","textPreview":"Problema real e objetivo do sistema","textChars":35,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":2,"bbox":[64,160,356,390]}
+{"kind":"shape","id":"sh/3q5o7qpg","slide":2,"bbox":[462,160,356,390]}
+{"kind":"shape","id":"sh/e9cvixcz","slide":2,"bbox":[860,160,356,390]}
+{"kind":"textbox","id":"sh/lwval87e","slide":2,"text":"Operacao manual","textPreview":"Operacao manual","textChars":15,"textLines":1,"bbox":[92,198,260,30]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":2,"bbox":[92,260,8,8]}
+{"kind":"textbox","id":"sh/32lszqtc","slide":2,"text":"Equipes contam vagas visualmente","textPreview":"Equipes contam vagas visualmente","textChars":32,"textLines":1,"bbox":[114,252,258,42]}
+{"kind":"shape","id":"sh/ahoza1gv","slide":2,"bbox":[92,302,8,8]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":2,"text":"Sem historico confiavel","textPreview":"Sem historico confiavel","textChars":23,"textLines":1,"bbox":[114,294,258,42]}
+{"kind":"shape","id":"sh/54zidony","slide":2,"bbox":[92,344,8,8]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":2,"text":"Alertas dependem de observacao humana","textPreview":"Alertas dependem de observacao humana","textChars":37,"textLines":1,"bbox":[114,336,258,42]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":2,"text":"Visao computacional","textPreview":"Visao computacional","textChars":19,"textLines":1,"bbox":[490,198,300,30]}
+{"kind":"shape","id":"sh/cvixczed","slide":2,"bbox":[490,260,8,8]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":2,"text":"YOLO detecta veiculos","textPreview":"YOLO detecta veiculos","textChars":21,"textLines":1,"bbox":[512,252,270,42]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":2,"bbox":[490,302,8,8]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":2,"text":"Poligonos representam vagas","textPreview":"Poligonos representam vagas","textChars":27,"textLines":1,"bbox":[512,294,270,42]}
+{"kind":"shape","id":"sh/c7u54zid","slide":2,"bbox":[490,344,8,8]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":2,"text":"Ocupacao calculada automaticamente","textPreview":"Ocupacao calculada automaticamente","textChars":34,"textLines":1,"bbox":[512,336,270,42]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":2,"text":"Valor para negocio","textPreview":"Valor para negocio","textChars":18,"textLines":1,"bbox":[888,198,280,30]}
+{"kind":"shape","id":"sh/czed8v6p","slide":2,"bbox":[888,260,8,8]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":2,"text":"Dashboard de lotacao","textPreview":"Dashboard de lotacao","textChars":20,"textLines":1,"bbox":[910,252,270,42]}
+{"kind":"shape","id":"sh/ytsvu9kn","slide":2,"bbox":[888,302,8,8]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":2,"text":"Historico e horarios de pico","textPreview":"Historico e horarios de pico","textChars":28,"textLines":1,"bbox":[910,294,270,42]}
+{"kind":"shape","id":"sh/cbulwval","slide":2,"bbox":[888,344,8,8]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":2,"text":"Relatorios para tomada de decisao","textPreview":"Relatorios para tomada de decisao","textChars":33,"textLines":1,"bbox":[910,336,270,42]}
+{"kind":"textbox","id":"sh/u54zidon","slide":2,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 2/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 2/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"notes","id":"nt/l0kycm","slide":2,"text":""}
+{"kind":"slide","id":"sl/hbeuc0","slide":3,"title":"SMART PARKING ANALYTICS","textShapes":16}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":3,"text":"Arquitetura implementada","textPreview":"Arquitetura implementada","textChars":24,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":3,"bbox":[70,260,180,110]}
+{"kind":"textbox","id":"sh/mtwra5gb","slide":3,"text":"Frontend\nReact + Vite","textPreview":"Frontend | React + Vite","textChars":21,"textLines":2,"bbox":[86,285,148,60]}
+{"kind":"shape","id":"sh/fepkzupw","slide":3,"bbox":[300,260,180,110]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"API\nFastAPI","textPreview":"API | FastAPI","textChars":11,"textLines":2,"bbox":[316,285,148,60]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":3,"bbox":[530,260,180,110]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":3,"text":"Servico YOLO\nbest.pt","textPreview":"Servico YOLO | best.pt","textChars":20,"textLines":2,"bbox":[546,285,148,60]}
+{"kind":"shape","id":"sh/fil0rqd4","slide":3,"bbox":[760,260,180,110]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":3,"text":"Banco\nSQLite/PostgreSQL","textPreview":"Banco | SQLite/PostgreSQL","textChars":23,"textLines":2,"bbox":[776,285,148,60]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":3,"bbox":[990,260,180,110]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":3,"text":"Analytics\nPDF/CSV","textPreview":"Analytics | PDF/CSV","textChars":17,"textLines":2,"bbox":[1006,285,148,60]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[250,295,40,32]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[480,295,40,32]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[710,295,40,32]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":3,"text":"->","textPreview":"->","textChars":2,"textLines":1,"bbox":[940,295,40,32]}
+{"kind":"shape","id":"sh/4r65wjud","slide":3,"bbox":[120,458,8,8]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":3,"text":"Upload de imagem/video pelo navegador","textPreview":"Upload de imagem/video pelo navegador","textChars":37,"textLines":1,"bbox":[142,450,978,34]}
+{"kind":"shape","id":"sh/m94fu18j","slide":3,"bbox":[120,492,8,8]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":3,"text":"Inferencia no backend com YOLO Ultralytics","textPreview":"Inferencia no backend com YOLO Ultralytics","textChars":42,"textLines":1,"bbox":[142,484,978,34]}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":3,"bbox":[120,526,8,8]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":3,"text":"Cruzamento: deteccoes x poligonos das vagas","textPreview":"Cruzamento: deteccoes x poligonos das vagas","textChars":43,"textLines":1,"bbox":[142,518,978,34]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":3,"bbox":[120,560,8,8]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":3,"text":"Persistencia de eventos, historico, alertas e relatorios","textPreview":"Persistencia de eventos, historico, alertas e relatorios","textChars":56,"textLines":1,"bbox":[142,552,978,34]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":3,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 3/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 3/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"notes","id":"nt/hbeuc0","slide":3,"text":""}
+{"kind":"slide","id":"sl/tgi0w6","slide":4,"title":"SMART PARKING ANALYTICS","textShapes":11}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":4,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":4,"text":"Dataset personalizado e classes","textPreview":"Dataset personalizado e classes","textChars":31,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/s72x4nap","slide":4,"bbox":[540,170,310,310]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":4,"bbox":[890,170,310,310]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":4,"text":"Dataset atual","textPreview":"Dataset atual","textChars":13,"textLines":1,"bbox":[570,205,240,28]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":4,"text":"106 imagens\nTrain: 78\nValid: 13\nTest: 15","textPreview":"106 imagens | Train: 78 | Valid: 13 | Test: 15","textChars":40,"textLines":4,"bbox":[570,260,230,120]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":4,"text":"Classes treinadas","textPreview":"Classes treinadas","textChars":17,"textLines":1,"bbox":[920,205,240,28]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":4,"bbox":[920,268,8,8]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":4,"text":"car","textPreview":"car","textChars":3,"textLines":1,"bbox":[942,260,198,38]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":4,"bbox":[920,306,8,8]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":4,"text":"motorcycle","textPreview":"motorcycle","textChars":10,"textLines":1,"bbox":[942,298,198,38]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":4,"bbox":[920,344,8,8]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":4,"text":"pickup","textPreview":"pickup","textChars":6,"textLines":1,"bbox":[942,336,198,38]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":4,"bbox":[920,382,8,8]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":4,"text":"van","textPreview":"van","textChars":3,"textLines":1,"bbox":[942,374,198,38]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":4,"text":"Para elevar a nota: substituir pelo export Roboflow com ~837 imagens anotadas e retreinar.","textPreview":"Para elevar a nota: substituir pelo export Roboflow com ~837 imagens anotadas e retreinar.","textChars":90,"textLines":1,"bbox":[64,535,1030,52]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":4,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 4/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 4/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"image","id":"im/ytsvu9kn","slide":4,"name":"","geometry":"roundRect","alt":"demo","bbox":[64,170,430,310]}
+{"kind":"notes","id":"nt/tgi0w6","slide":4,"text":""}
+{"kind":"slide","id":"sl/8hhcqu","slide":5,"title":"SMART PARKING ANALYTICS","textShapes":10}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":5,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":5,"text":"Treinamento do modelo proprio","textPreview":"Treinamento do modelo proprio","textChars":29,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/65wjudg7","slide":5,"bbox":[795,160,420,410]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":5,"text":"Configuracao","textPreview":"Configuracao","textChars":12,"textLines":1,"bbox":[830,195,300,30]}
+{"kind":"shape","id":"sh/obm58z25","slide":5,"bbox":[830,260,8,8]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":5,"text":"Base: YOLO26n","textPreview":"Base: YOLO26n","textChars":13,"textLines":1,"bbox":[852,252,298,36]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":5,"bbox":[830,296,8,8]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":5,"text":"100 epocas","textPreview":"100 epocas","textChars":10,"textLines":1,"bbox":[852,288,298,36]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":5,"bbox":[830,332,8,8]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":5,"text":"imgsz 640","textPreview":"imgsz 640","textChars":9,"textLines":1,"bbox":[852,324,298,36]}
+{"kind":"shape","id":"sh/p4r65wju","slide":5,"bbox":[830,368,8,8]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":5,"text":"batch 4","textPreview":"batch 4","textChars":7,"textLines":1,"bbox":[852,360,298,36]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":5,"bbox":[830,404,8,8]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":5,"text":"CPU local","textPreview":"CPU local","textChars":9,"textLines":1,"bbox":[852,396,298,36]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":5,"text":"Melhor validacao observada: Precision 0.824, mAP50-95 0.179.","textPreview":"Melhor validacao observada: Precision 0.824, mAP50-95 0.179.","textChars":60,"textLines":1,"bbox":[830,485,330,58]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":5,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 5/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 5/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"image","id":"im/0fepkzup","slide":5,"name":"","geometry":"roundRect","alt":"training","bbox":[64,160,690,410]}
+{"kind":"notes","id":"nt/8hhcqu","slide":5,"text":""}
+{"kind":"slide","id":"sl/uxessd","slide":6,"title":"SMART PARKING ANALYTICS","textShapes":8}
+{"kind":"textbox","id":"sh/svu9knih","slide":6,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":6,"text":"Metricas e leitura critica","textPreview":"Metricas e leitura critica","textChars":26,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":6,"bbox":[630,155,585,410]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":6,"text":"Como explicar para o professor","textPreview":"Como explicar para o professor","textChars":30,"textLines":1,"bbox":[665,190,440,30]}
+{"kind":"shape","id":"sh/zidonyd0","slide":6,"bbox":[665,256,8,8]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":6,"text":"Precision boa: quando detecta, tende a acertar","textPreview":"Precision boa: quando detecta, tende a acertar","textChars":46,"textLines":1,"bbox":[687,248,478,39]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":6,"bbox":[665,295,8,8]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":6,"text":"Recall baixo: ainda perde veiculos em alguns angulos","textPreview":"Recall baixo: ainda perde veiculos em alguns angulos","textChars":52,"textLines":1,"bbox":[687,287,478,39]}
+{"kind":"shape","id":"sh/idonyd0z","slide":6,"bbox":[665,334,8,8]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":6,"text":"Dataset pequeno e desbalanceado limita a generalizacao","textPreview":"Dataset pequeno e desbalanceado limita a generalizacao","textChars":54,"textLines":1,"bbox":[687,326,478,39]}
+{"kind":"shape","id":"sh/0je9cvix","slide":6,"bbox":[665,373,8,8]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":6,"text":"Proxima versao: 837 imagens anotadas do mesmo dominio","textPreview":"Proxima versao: 837 imagens anotadas do mesmo dominio","textChars":53,"textLines":1,"bbox":[687,365,478,39]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":6,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 6/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 6/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"image","id":"im/je9cvixc","slide":6,"name":"","geometry":"roundRect","alt":"confusion","bbox":[64,155,520,410]}
+{"kind":"notes","id":"nt/uxessd","slide":6,"text":""}
+{"kind":"slide","id":"sl/27trvo","slide":7,"title":"SMART PARKING ANALYTICS","textShapes":9}
+{"kind":"textbox","id":"sh/oj2t83it","slide":7,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":7,"text":"Inferencia: veiculos + vagas configuradas","textPreview":"Inferencia: veiculos + vagas configuradas","textChars":41,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/dsji5sne","slide":7,"bbox":[795,150,420,430]}
+{"kind":"textbox","id":"sh/o7qpg3ex","slide":7,"text":"O que mostrar ao vivo","textPreview":"O que mostrar ao vivo","textChars":21,"textLines":1,"bbox":[830,185,330,30]}
+{"kind":"shape","id":"sh/vmtwra5g","slide":7,"bbox":[830,250,8,8]}
+{"kind":"textbox","id":"sh/61032lsz","slide":7,"text":"Escolher imagem do dataset/teste","textPreview":"Escolher imagem do dataset/teste","textChars":32,"textLines":1,"bbox":[852,242,308,40]}
+{"kind":"shape","id":"sh/dg7adsji","slide":7,"bbox":[830,290,8,8]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":7,"text":"Confirmar que aparece loaded:models/best.pt","textPreview":"Confirmar que aparece loaded:models/best.pt","textChars":43,"textLines":1,"bbox":[852,282,308,40]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":7,"bbox":[830,330,8,8]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":7,"text":"Mostrar caixas YOLO e vagas ocupadas","textPreview":"Mostrar caixas YOLO e vagas ocupadas","textChars":36,"textLines":1,"bbox":[852,322,308,40]}
+{"kind":"shape","id":"sh/4zidonyd","slide":7,"bbox":[830,370,8,8]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":7,"text":"Abrir historico e relatorio CSV/PDF","textPreview":"Abrir historico e relatorio CSV/PDF","textChars":35,"textLines":1,"bbox":[852,362,308,40]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":7,"text":"Evite usar video top-down novo antes do retreino.","textPreview":"Evite usar video top-down novo antes do retreino.","textChars":49,"textLines":1,"bbox":[830,498,330,46]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":7,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 7/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 7/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"image","id":"im/bm58z25k","slide":7,"name":"","geometry":"roundRect","alt":"inference","bbox":[64,150,690,430]}
+{"kind":"notes","id":"nt/27trvo","slide":7,"text":""}
+{"kind":"slide","id":"sl/trqv6l","slide":8,"title":"SMART PARKING ANALYTICS","textShapes":17}
+{"kind":"textbox","id":"sh/72x4nap4","slide":8,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":8,"text":"Interface web propria","textPreview":"Interface web propria","textChars":21,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/p8nqxs72","slide":8,"bbox":[64,150,1150,420]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":8,"bbox":[96,195,190,125]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":8,"text":"Total de vagas","textPreview":"Total de vagas","textChars":14,"textLines":1,"bbox":[114,218,150,24]}
+{"kind":"textbox","id":"sh/0z61032l","slide":8,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[114,250,130,56]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":8,"bbox":[316,195,190,125]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":8,"text":"Ocupadas","textPreview":"Ocupadas","textChars":8,"textLines":1,"bbox":[334,218,150,24]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":8,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[334,250,130,56]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":8,"bbox":[536,195,190,125]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":8,"text":"Livres","textPreview":"Livres","textChars":6,"textLines":1,"bbox":[554,218,150,24]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":8,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[554,250,130,56]}
+{"kind":"shape","id":"sh/4fu18jqh","slide":8,"bbox":[756,195,190,125]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":8,"text":"Ocupacao","textPreview":"Ocupacao","textChars":8,"textLines":1,"bbox":[774,218,150,24]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":8,"text":"29%","textPreview":"29%","textChars":3,"textLines":1,"bbox":[774,250,130,56]}
+{"kind":"shape","id":"sh/xobm58z2","slide":8,"bbox":[976,195,190,125]}
+{"kind":"textbox","id":"sh/83itgfml","slide":8,"text":"Veiculos","textPreview":"Veiculos","textChars":8,"textLines":1,"bbox":[994,218,150,24]}
+{"kind":"textbox","id":"sh/fepkzupw","slide":8,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[994,250,130,56]}
+{"kind":"shape","id":"sh/mtwra5gb","slide":8,"bbox":[96,365,500,135]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"Grafico temporal","textPreview":"Grafico temporal","textChars":16,"textLines":1,"bbox":[125,392,220,28]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":8,"text":"Historico de ocupacao ao longo das inferencias.","textPreview":"Historico de ocupacao ao longo das inferencias.","textChars":47,"textLines":1,"bbox":[125,435,380,34]}
+{"kind":"shape","id":"sh/c7u54zid","slide":8,"bbox":[650,365,500,135]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":8,"text":"Relatorios","textPreview":"Relatorios","textChars":10,"textLines":1,"bbox":[680,392,220,28]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":8,"text":"Exportacao CSV/PDF com estatisticas do estacionamento.","textPreview":"Exportacao CSV/PDF com estatisticas do estacionamento.","textChars":54,"textLines":1,"bbox":[680,435,400,34]}
+{"kind":"textbox","id":"sh/judg7ads","slide":8,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 8/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 8/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"notes","id":"nt/trqv6l","slide":8,"text":""}
+{"kind":"slide","id":"sl/d6d3yw","slide":9,"title":"SMART PARKING ANALYTICS","textShapes":18}
+{"kind":"textbox","id":"sh/7u54zido","slide":9,"text":"SMART PARKING ANALYTICS","textPreview":"SMART PARKING ANALYTICS","textChars":23,"textLines":1,"bbox":[64,42,520,24]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":9,"text":"Roteiro seguro da demonstracao ao vivo","textPreview":"Roteiro seguro da demonstracao ao vivo","textChars":38,"textLines":1,"bbox":[64,74,900,58]}
+{"kind":"shape","id":"sh/l0rqd4vm","slide":9,"bbox":[90,155,1080,64]}
+{"kind":"shape","id":"sh/eloj2t83","slide":9,"bbox":[116,169,38,38]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[128,175,20,24]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":9,"text":"Abrir API /health e Swagger","textPreview":"Abrir API /health e Swagger","textChars":27,"textLines":1,"bbox":[180,167,360,26]}
+{"kind":"textbox","id":"sh/lc7u54zi","slide":9,"text":"Prova que backend esta online","textPreview":"Prova que backend esta online","textChars":29,"textLines":1,"bbox":[560,170,520,24]}
+{"kind":"shape","id":"sh/epkzupwb","slide":9,"bbox":[90,243,1080,64]}
+{"kind":"shape","id":"sh/7adsji5s","slide":9,"bbox":[116,257,38,38]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[128,263,20,24]}
+{"kind":"textbox","id":"sh/u54zidon","slide":9,"text":"Abrir dashboard React","textPreview":"Abrir dashboard React","textChars":21,"textLines":1,"bbox":[180,255,360,26]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":9,"text":"Mostra interface autoral","textPreview":"Mostra interface autoral","textChars":24,"textLines":1,"bbox":[560,258,520,24]}
+{"kind":"shape","id":"sh/cbulwval","slide":9,"bbox":[90,331,1080,64]}
+{"kind":"shape","id":"sh/neloj2t8","slide":9,"bbox":[116,345,38,38]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[128,351,20,24]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":9,"text":"Enviar imagem validada","textPreview":"Enviar imagem validada","textChars":22,"textLines":1,"bbox":[180,343,360,26]}
+{"kind":"textbox","id":"sh/czed8v6p","slide":9,"text":"Evita falha por dominio diferente","textPreview":"Evita falha por dominio diferente","textChars":33,"textLines":1,"bbox":[560,346,520,24]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":9,"bbox":[90,419,1080,64]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":9,"bbox":[116,433,38,38]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[128,439,20,24]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":9,"text":"Mostrar metricas e imagem anotada","textPreview":"Mostrar metricas e imagem anotada","textChars":33,"textLines":1,"bbox":[180,431,360,26]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":9,"text":"Fecha o ciclo inferencia -> analytics","textPreview":"Fecha o ciclo inferencia -> analytics","textChars":37,"textLines":1,"bbox":[560,434,520,24]}
+{"kind":"shape","id":"sh/d8v6psfi","slide":9,"bbox":[90,507,1080,64]}
+{"kind":"shape","id":"sh/6tovahoz","slide":9,"bbox":[116,521,38,38]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":9,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[128,527,20,24]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":9,"text":"Baixar CSV/PDF","textPreview":"Baixar CSV/PDF","textChars":14,"textLines":1,"bbox":[180,519,360,26]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":9,"text":"Mostra produto final","textPreview":"Mostra produto final","textChars":20,"textLines":1,"bbox":[560,522,520,24]}
+{"kind":"textbox","id":"sh/61032lsz","slide":9,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 9/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 9/10","textChars":57,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"notes","id":"nt/d6d3yw","slide":9,"text":""}
+{"kind":"slide","id":"sl/x10t1k","slide":10,"title":"Conclusao","textShapes":19}
+{"kind":"textbox","id":"sh/z61032ls","slide":10,"text":"Conclusao","textPreview":"Conclusao","textChars":9,"textLines":1,"bbox":[64,60,500,58]}
+{"kind":"shape","id":"sh/orytsvu9","slide":10,"bbox":[64,160,350,320]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":10,"bbox":[465,160,350,320]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":10,"bbox":[866,160,350,320]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":10,"text":"Ciclo completo","textPreview":"Ciclo completo","textChars":14,"textLines":1,"bbox":[100,205,250,30]}
+{"kind":"shape","id":"sh/sfil0rqd","slide":10,"bbox":[100,268,8,8]}
+{"kind":"textbox","id":"sh/h0fepkzu","slide":10,"text":"dataset","textPreview":"dataset","textChars":7,"textLines":1,"bbox":[122,260,228,34]}
+{"kind":"shape","id":"sh/65wjudg7","slide":10,"bbox":[100,302,8,8]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":10,"text":"treino","textPreview":"treino","textChars":6,"textLines":1,"bbox":[122,294,228,34]}
+{"kind":"shape","id":"sh/zupwb2hw","slide":10,"bbox":[100,336,8,8]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":10,"text":"API","textPreview":"API","textChars":3,"textLines":1,"bbox":[122,328,228,34]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":10,"bbox":[100,370,8,8]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":10,"text":"frontend","textPreview":"frontend","textChars":8,"textLines":1,"bbox":[122,362,228,34]}
+{"kind":"shape","id":"sh/z61032ls","slide":10,"bbox":[100,404,8,8]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":10,"text":"demo","textPreview":"demo","textChars":4,"textLines":1,"bbox":[122,396,228,34]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":10,"text":"Aplicabilidade","textPreview":"Aplicabilidade","textChars":14,"textLines":1,"bbox":[500,205,250,30]}
+{"kind":"shape","id":"sh/orytsvu9","slide":10,"bbox":[500,268,8,8]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":10,"text":"shoppings","textPreview":"shoppings","textChars":9,"textLines":1,"bbox":[522,260,228,34]}
+{"kind":"shape","id":"sh/6xkf6dcb","slide":10,"bbox":[500,302,8,8]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":10,"text":"condominios","textPreview":"condominios","textChars":11,"textLines":1,"bbox":[522,294,228,34]}
+{"kind":"shape","id":"sh/7mp0bi9s","slide":10,"bbox":[500,336,8,8]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":10,"text":"campus","textPreview":"campus","textChars":6,"textLines":1,"bbox":[522,328,228,34]}
+{"kind":"shape","id":"sh/psfil0rq","slide":10,"bbox":[500,370,8,8]}
+{"kind":"textbox","id":"sh/epkzupwb","slide":10,"text":"empresas","textPreview":"empresas","textChars":8,"textLines":1,"bbox":[522,362,228,34]}
+{"kind":"textbox","id":"sh/7adsji5s","slide":10,"text":"Evolucao","textPreview":"Evolucao","textChars":8,"textLines":1,"bbox":[900,205,250,30]}
+{"kind":"shape","id":"sh/wval87ed","slide":10,"bbox":[900,268,8,8]}
+{"kind":"textbox","id":"sh/pg3ex0nu","slide":10,"text":"837 imagens","textPreview":"837 imagens","textChars":11,"textLines":1,"bbox":[922,260,228,34]}
+{"kind":"shape","id":"sh/eloj2t83","slide":10,"bbox":[900,302,8,8]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":10,"text":"retreino","textPreview":"retreino","textChars":8,"textLines":1,"bbox":[922,294,228,34]}
+{"kind":"shape","id":"sh/t83itgfm","slide":10,"bbox":[900,336,8,8]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":10,"text":"heatmap","textPreview":"heatmap","textChars":7,"textLines":1,"bbox":[922,328,228,34]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":10,"bbox":[900,370,8,8]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":10,"text":"tempo real","textPreview":"tempo real","textChars":10,"textLines":1,"bbox":[922,362,228,34]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":10,"text":"Mensagem final: nao e apenas um contador; e uma plataforma de analytics operacional baseada em visao computacional.","textPreview":"Mensagem final: nao e apenas um contador; e uma plataforma de analytics operacional baseada em visao computacional.","textChars":115,"textLines":1,"bbox":[120,555,1030,54]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":10,"text":"PDI e Visao Computacional | YOLO + FastAPI + React | 10/10","textPreview":"PDI e Visao Computacional | YOLO + FastAPI + React | 10/10","textChars":58,"textLines":1,"bbox":[64,682,620,20]}
+{"kind":"notes","id":"nt/x10t1k","slide":10,"text":""}

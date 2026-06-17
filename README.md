@@ -1,4 +1,4 @@
-# Smart Parking Analytics
+﻿# Smart Parking Analytics
 
 Sistema inteligente de estacionamento com visao computacional, YOLO26, FastAPI e React.
 
@@ -15,7 +15,7 @@ Sistema inteligente de estacionamento com visao computacional, YOLO26, FastAPI e
 - Alertas quando a ocupacao ultrapassa 90%.
 - Relatorios CSV e PDF.
 - Dashboard React + Vite com upload, cards, graficos e imagem anotada.
-- Modelo YOLO26n treinado com dataset personalizado.
+- Modelo YOLO26n treinado com dataset personalizado de classe unica `car`.
 
 ## Estrutura
 
@@ -90,11 +90,11 @@ Dataset:
 ```text
 Fonte: Roboflow
 Formato: YOLO26 Object Detection
-Total: 106 imagens
-Train: 78 imagens
-Validation: 13 imagens
-Test: 15 imagens
-Classes: car, motorcycle, pickup, van
+Total: 166 imagens
+Train: 103 imagens
+Validation: 34 imagens
+Test: 29 imagens
+Classes: car
 ```
 
 Treinamento:
@@ -109,19 +109,19 @@ Device: CPU
 Metricas no validation:
 
 ```text
-Precision: 0.826
-Recall: 0.277
-mAP50: 0.344
-mAP50-95: 0.179
+Precision: 0.915
+Recall: 0.885
+mAP50: 0.930
+mAP50-95: 0.871
 ```
 
 Metricas no test:
 
 ```text
-Precision: 0.777
-Recall: 0.161
-mAP50: 0.146
-mAP50-95: 0.0963
+Precision: 0.913
+Recall: 0.919
+mAP50: 0.921
+mAP50-95: 0.865
 ```
 
 Artefatos:
@@ -134,9 +134,31 @@ docs/training-results/confusion_matrix_normalized.png
 backend/models/best.pt
 ```
 
-Observacao: o dataset ainda esta desbalanceado. A classe `van` tem poucos exemplos e isso limita as metricas finais.
+Observacao: o dataset final foi simplificado para classe unica `car`, reduzindo confusao entre classes e melhorando as metricas de deteccao.
 
 ## Cadastrar vagas
+
+### Opcao rapida para o novo dataset `car`
+
+Use quando a demo for baseada apenas em deteccao de carros e capacidade total do estacionamento:
+
+```bash
+curl -X POST http://localhost:8000/api/parking-spots/capacity ^
+  -H "Content-Type: application/json" ^
+  -d "{\"parking_lot_id\":\"default\",\"parking_lot_name\":\"Campus Parking\",\"location\":\"Universidade\",\"total_spots\":40}"
+```
+
+Nesse modo, o YOLO conta os carros detectados e o sistema calcula:
+
+```text
+ocupadas = min(carros_detectados, total_spots)
+livres = total_spots - ocupadas
+taxa = ocupadas / total_spots
+```
+
+### Opcao completa com vagas calibradas
+
+Use quando a imagem/video vier sempre do mesmo enquadramento de camera e voce quiser saber exatamente qual vaga esta livre ou ocupada.
 
 Exemplo:
 
@@ -159,6 +181,7 @@ curl -X POST http://localhost:8000/api/parking-spots ^
 | `GET` | `/api/reports?format=pdf` | Relatorio PDF |
 | `GET` | `/api/reports?format=csv` | Relatorio CSV |
 | `POST` | `/api/parking-spots` | Cadastro de vagas |
+| `POST` | `/api/parking-spots/capacity` | Cadastro rapido da capacidade total |
 
 ## Arquitetura
 
@@ -183,6 +206,20 @@ flowchart TD
 - Heatmap por setor.
 - Previsao de lotacao.
 
+## Criterios da avaliacao
+
+Checklist completo:
+
+```text
+docs/checklist-avaliacao.md
+```
+
+Fluxograma draw.io:
+
+```text
+docs/architecture.drawio
+```
+
 ## Deploy
 
 Recomendacao:
@@ -203,15 +240,18 @@ docs/deployment.md
 
 - [x] API propria com FastAPI.
 - [x] Frontend proprio com React + Vite.
-- [x] Modelo YOLO26n treinado.
-- [x] Dataset personalizado exportado do Roboflow.
+- [x] Modelo YOLO26n treinado por 100 epocas.
+- [x] Dataset personalizado exportado do Roboflow e adaptado para classe unica `car`.
 - [x] `best.pt` copiado para `backend/models/best.pt`.
 - [x] Metricas de treino registradas.
 - [x] Diagrama Mermaid no README.
+- [x] Fluxograma draw.io em `docs/architecture.drawio`.
+- [x] Checklist por criterio em `docs/checklist-avaliacao.md`.
 - [x] Relatorios CSV e PDF.
 - [x] Analytics de ocupacao e historico.
 - [x] Suporte local a SQLite.
 - [x] Suporte de deploy a PostgreSQL via `DATABASE_URL`.
-- [ ] Melhorar balanceamento do dataset.
+- [x] Simplificar classes do dataset para melhorar robustez da demo.
 - [ ] Publicar link do `best.pt` se nao versionar o peso no GitHub.
 - [ ] Ensaiar demonstracao ao vivo.
+

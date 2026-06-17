@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" modified="2026-06-17T00:00:00.000Z" agent="Codex" version="26.0.0" type="device">
+  <diagram id="smart-parking-architecture" name="Smart Parking Analytics">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Smart Parking Analytics - Fluxograma de Arquitetura" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="430" y="30" width="760" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="Usuario / Operador" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="180" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="frontend" value="Frontend React + Vite&#xa;Dashboard, upload, graficos, relatorios" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="250" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="API FastAPI&#xa;/predict, /video/upload, /statistics, /history, /reports, /parking-spots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="690" y="110" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="yolo" value="Servico de Inferencia YOLO&#xa;backend/models/best.pt&#xa;classe: car" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1120" y="110" width="250" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="Banco de Dados&#xa;SQLite local ou PostgreSQL Render&#xa;events, detections, history, alerts, spots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce7f3;strokeColor=#db2777;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="690" y="330" width="310" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="analytics" value="Analytics Service&#xa;ocupacao, vagas livres, picos, historico, alertas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e7ff;strokeColor=#4f46e5;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="340" y="330" width="250" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="reports" value="Relatorios&#xa;CSV e PDF" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#475569;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1120" y="340" width="250" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="dataset" value="Dataset Personalizado&#xa;Roboflow YOLO26&#xa;166 imagens, 6688 carros, classe car" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ecfeff;strokeColor=#0891b2;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="80" y="560" width="280" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="training" value="Treinamento Ultralytics&#xa;yolo26n.pt, 100 epocas&#xa;mAP50 test: 0.921" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#ea580c;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="470" y="560" width="280" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="deploy" value="Deploy recomendado&#xa;Frontend: Vercel&#xa;Backend: Render&#xa;Banco: Render PostgreSQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#0f172a;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="850" y="560" width="280" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="calibration" value="Calibracao de Vagas&#xa;Modo 1: poligonos por camera&#xa;Modo 2: capacidade total + contagem de carros" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;fontSize=15" vertex="1" parent="1">
+          <mxGeometry x="1230" y="560" width="280" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" edge="1" source="user" target="frontend" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" edge="1" source="frontend" target="api" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" edge="1" source="api" target="yolo" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" edge="1" source="yolo" target="api" parent="1" style="endArrow=block;html=1;strokeWidth=2;dashed=1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" edge="1" source="api" target="db" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" edge="1" source="db" target="analytics" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" edge="1" source="analytics" target="frontend" parent="1" style="endArrow=block;html=1;strokeWidth=2;dashed=1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" edge="1" source="api" target="reports" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" edge="1" source="dataset" target="training" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" edge="1" source="training" target="yolo" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" edge="1" source="calibration" target="api" parent="1" style="endArrow=block;html=1;strokeWidth=2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" edge="1" source="api" target="deploy" parent="1" style="endArrow=block;html=1;strokeWidth=2;dashed=1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
