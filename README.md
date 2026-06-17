@@ -2,7 +2,7 @@
 
 Sistema inteligente de estacionamento com visao computacional, YOLO26, FastAPI e React.
 
-## O que ja esta implementado
+ implementado
 
 - API FastAPI com Swagger.
 - Upload de imagem em `POST /api/predict`.
