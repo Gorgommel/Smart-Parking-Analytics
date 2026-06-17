@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, BarChart3, Car, Download, Gauge, ParkingCircle, UploadCloud, Video } from "lucide-react";
 import {
   Area,
@@ -14,7 +14,7 @@ import {
 import { MetricCard } from "./components/MetricCard";
 import { PredictionResponse, createReport, fetchHistory, fetchStatistics, predictImage, uploadVideo } from "./api/client";
 
-const apiOrigin = import.meta.env.VITE_API_ORIGIN ?? "http://localhost:8000";
+const apiOrigin = import.meta.env.VITE_API_ORIGIN ?? "http://127.0.0.1:8000";
 
 export function App() {
   const [prediction, setPrediction] = useState<PredictionResponse | null>(null);
@@ -22,6 +22,9 @@ export function App() {
   const [statistics, setStatistics] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("Envie uma imagem para iniciar a analise.");
+  const [selectedFileName, setSelectedFileName] = useState<string | null>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
+  const videoInputRef = useRef<HTMLInputElement>(null);
 
   async function refreshAnalytics() {
     const [historyData, statsData] = await Promise.all([fetchHistory(), fetchStatistics()]);
@@ -43,15 +46,13 @@ export function App() {
       }));
     }
     return [
-      { time: "08:00", ocupacao: 28, ocupadas: 34, livres: 86 },
-      { time: "10:00", ocupacao: 48, ocupadas: 58, livres: 62 },
-      { time: "12:00", ocupacao: 76, ocupadas: 91, livres: 29 },
-      { time: "18:00", ocupacao: 92, ocupadas: 110, livres: 10 }
+      { time: "--", ocupacao: 0, ocupadas: 0, livres: 0 }
     ];
   }, [history]);
 
   async function handleImage(file?: File) {
     if (!file) return;
+    setSelectedFileName(file.name);
     setLoading(true);
     setMessage("Processando imagem com YOLO...");
     try {
@@ -68,10 +69,16 @@ export function App() {
 
   async function handleVideo(file?: File) {
     if (!file) return;
+    setSelectedFileName(file.name);
     setLoading(true);
+    setMessage("Processando video por amostragem de frames...");
     try {
       const data = await uploadVideo(file);
-      setMessage(`Video recebido. Job: ${data.job_id}`);
+      if (data.summary) {
+        setPrediction(data.summary);
+        await refreshAnalytics();
+      }
+      setMessage(`${data.message ?? "Video processado."} Job: ${data.job_id}`);
     } catch {
       setMessage("Nao foi possivel enviar o video.");
     } finally {
@@ -84,10 +91,11 @@ export function App() {
     window.open(`${apiOrigin}${report.report_url}`, "_blank");
   }
 
-  const total = prediction?.total_spots ?? 120;
-  const occupied = prediction?.occupied_spots ?? 0;
-  const free = prediction?.free_spots ?? total - occupied;
-  const rate = prediction?.occupancy_rate ?? 0;
+  const latest = history[history.length - 1];
+  const total = prediction?.total_spots ?? latest?.total_spots ?? 0;
+  const occupied = prediction?.occupied_spots ?? latest?.occupied_spots ?? 0;
+  const free = prediction?.free_spots ?? latest?.free_spots ?? total - occupied;
+  const rate = prediction?.occupancy_rate ?? latest?.occupancy_rate ?? 0;
   const vehicles = prediction?.vehicles_detected ?? 0;
 
   return (
@@ -102,10 +110,10 @@ export function App() {
         </div>
         <nav>
           <a className="active">Dashboard</a>
-          <a>Upload</a>
-          <a>Historico</a>
-          <a>Relatorios</a>
-          <a>Alertas</a>
+          <a href="#upload">Upload</a>
+          <a href="#historico">Historico</a>
+          <a href="#relatorios">Relatorios</a>
+          <a href="#alertas">Alertas</a>
         </nav>
       </aside>
 
@@ -121,7 +129,7 @@ export function App() {
         </header>
 
         <section className="metrics-grid">
-          <MetricCard label="Total de vagas" value={String(total)} helper="capacidade monitorada" icon={<ParkingCircle />} />
+          <MetricCard label="Total de vagas" value={String(total)} helper={total ? "vagas cadastradas" : "cadastre vagas na API"} icon={<ParkingCircle />} />
           <MetricCard label="Ocupadas" value={String(occupied)} helper="vagas com veiculo" icon={<Car />} />
           <MetricCard label="Livres" value={String(free)} helper="disponiveis agora" icon={<Gauge />} />
           <MetricCard label="Taxa de ocupacao" value={`${Math.round(rate * 100)}%`} helper="ocupadas / total" icon={<BarChart3 />} />
@@ -135,24 +143,31 @@ export function App() {
           </section>
         )}
 
-        <section className="workspace-grid">
+        <section className="workspace-grid" id="upload">
           <div className="panel upload-panel">
             <h2>Entrada de midia</h2>
             <div className="upload-actions">
-              <label className="upload-box">
+              <div className="upload-box">
                 <UploadCloud />
                 <strong>Imagem</strong>
                 <span>JPG, PNG ou WEBP</span>
-                <input type="file" accept="image/*" onChange={(event) => handleImage(event.target.files?.[0])} />
-              </label>
-              <label className="upload-box">
+                <button className="primary-action" onClick={() => imageInputRef.current?.click()} disabled={loading}>
+                  Selecionar imagem
+                </button>
+                <input ref={imageInputRef} type="file" accept="image/*" onChange={(event) => handleImage(event.target.files?.[0])} />
+              </div>
+              <div className="upload-box">
                 <Video />
                 <strong>Video</strong>
                 <span>MP4, MOV ou AVI</span>
-                <input type="file" accept="video/*" onChange={(event) => handleVideo(event.target.files?.[0])} />
-              </label>
+                <button className="primary-action" onClick={() => videoInputRef.current?.click()} disabled={loading}>
+                  Selecionar video
+                </button>
+                <input ref={videoInputRef} type="file" accept="video/*" onChange={(event) => handleVideo(event.target.files?.[0])} />
+              </div>
             </div>
-            <div className="report-actions">
+            {selectedFileName && <p className="file-line">Arquivo: {selectedFileName}</p>}
+            <div className="report-actions" id="relatorios">
               <button onClick={() => downloadReport("pdf")} disabled={loading}>
                 <Download size={16} /> PDF
               </button>
@@ -165,14 +180,21 @@ export function App() {
           <div className="panel result-panel">
             <h2>Resultado visual</h2>
             {prediction ? (
-              <img src={`${apiOrigin}${prediction.annotated_image_url}`} alt="Resultado anotado" />
+              <>
+                <img src={`${apiOrigin}${prediction.annotated_image_url}`} alt="Resultado anotado" />
+                <div className="legend-row">
+                  <span><i className="dot free" /> vaga livre</span>
+                  <span><i className="dot occupied" /> vaga ocupada</span>
+                  <span>{prediction.occupied_spot_ids?.length ?? 0} vagas atribuidas</span>
+                </div>
+              </>
             ) : (
-              <div className="empty-preview">A imagem anotada aparecera aqui.</div>
+              <div className="empty-preview">Selecione uma imagem ou video para ver vagas livres e ocupadas.</div>
             )}
           </div>
         </section>
 
-        <section className="charts-grid">
+        <section className="charts-grid" id="historico">
           <div className="panel chart-panel">
             <h2>Evolucao temporal</h2>
             <ResponsiveContainer width="100%" height={260}>
@@ -200,7 +222,7 @@ export function App() {
           </div>
         </section>
 
-        <section className="panel detections-panel">
+        <section className="panel detections-panel" id="alertas">
           <h2>Deteccoes recentes</h2>
           <table>
             <thead>

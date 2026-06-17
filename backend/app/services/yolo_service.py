@@ -60,13 +60,33 @@ class YoloService:
             )
         return detections
 
-    def annotate(self, image_path: Path, detections: list[dict[str, Any]], output_path: Path) -> None:
+    def annotate(
+        self,
+        image_path: Path,
+        detections: list[dict[str, Any]],
+        output_path: Path,
+        spots: list[Any] | None = None,
+        occupied_spot_codes: set[str] | None = None,
+    ) -> None:
         image = Image.open(image_path).convert("RGB")
         draw = ImageDraw.Draw(image)
         try:
             font = ImageFont.truetype("arial.ttf", 16)
         except Exception:
             font = ImageFont.load_default()
+
+        occupied_spot_codes = occupied_spot_codes or set()
+
+        if spots:
+            for spot in spots:
+                polygon = [tuple(point) for point in spot.polygon]
+                is_occupied = spot.code in occupied_spot_codes
+                color = "#ef4444" if is_occupied else "#22c55e"
+                draw.polygon(polygon, outline=color)
+                draw.line(polygon + [polygon[0]], fill=color, width=3)
+                label_x, label_y = polygon[0]
+                draw.rectangle((label_x, max(label_y - 18, 0), label_x + 42, label_y), fill=color)
+                draw.text((label_x + 4, max(label_y - 16, 0)), spot.code, fill="white", font=font)
 
         colors = {
             "car": "#1d4ed8",

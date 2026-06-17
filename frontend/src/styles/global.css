@@ -218,6 +218,27 @@ h2 {
   font-size: 13px;
 }
 
+.primary-action {
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #fff;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+.primary-action:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.file-line {
+  margin-top: 12px;
+  color: #475569;
+  font-size: 14px;
+}
+
 .report-actions {
   display: flex;
   gap: 10px;
@@ -255,6 +276,32 @@ h2 {
   place-items: center;
   color: #64748b;
   border: 1px dashed #cbd5e1;
+}
+
+.legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin-top: 12px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 999px;
+  margin-right: 6px;
+}
+
+.dot.free {
+  background: #22c55e;
+}
+
+.dot.occupied {
+  background: #ef4444;
 }
 
 table {

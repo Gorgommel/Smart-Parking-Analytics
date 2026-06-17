@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:8000/api"
+  baseURL: import.meta.env.VITE_API_URL ?? "http://127.0.0.1:8000/api"
 });
 
 export type PredictionResponse = {
@@ -15,12 +15,23 @@ export type PredictionResponse = {
   vehicles_detected: number;
   annotated_image_url: string;
   alert: string | null;
+  occupied_spot_ids?: string[];
   detections: Array<{
     class_name: string;
     confidence: number;
     bbox: number[];
     spot_id: string | null;
   }>;
+};
+
+export type VideoUploadResponse = {
+  job_id: string;
+  status: string;
+  message?: string;
+  progress: number;
+  processed_frames: number;
+  total_frames: number;
+  summary?: PredictionResponse;
 };
 
 export async function predictImage(file: File, parkingLotId = "default") {
@@ -36,7 +47,7 @@ export async function uploadVideo(file: File, parkingLotId = "default") {
   form.append("file", file);
   form.append("parking_lot_id", parkingLotId);
   form.append("frame_interval_seconds", "5");
-  const response = await api.post("/video/upload", form);
+  const response = await api.post<VideoUploadResponse>("/video/upload", form);
   return response.data;
 }
 
